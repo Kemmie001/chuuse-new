@@ -1,0 +1,130 @@
+.header1 {
+  font-size: 64px;
+  line-height: 80px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+.header2 {
+  font-size: 48px;
+  line-height: 58px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.header3 {
+  font-size: 40px;
+  line-height: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.header4 {
+  font-size: 32px;
+  line-height: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.header5 {
+  font-size: 28px;
+  line-height: 32px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.header6 {
+  font-size: 22px;
+  line-height: 26px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.header7 {
+  font-size: 20px;
+  line-height: 26px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+.bold-para {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.bold-button {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.bold-caption {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.bold-overline {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.headline {
+  font-size: 20px;
+  line-height: 28px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+.para1 {
+  font-size: 18px;
+  line-height: 26px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+.para2 {
+  font-size: 16px;
+  line-height: 28px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.label {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.label2 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+.caption {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+.caption2 {
+  font-size: 10px;
+  line-height: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+.caption3 {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.btn-primary {
+  @apply bg-primary;
+  // @apply px-10;
+  border-radius: 8px;
+  // @apply py-5;
+  @apply text-white;
+  @apply bold-button;
+}
+.btn-secondary {
+  @apply bg-white;
+  // @apply px-10;
+  border-radius: 8px;
+  // @apply py-5;
+  @apply text-primary;
+  @apply bold-button;
+}

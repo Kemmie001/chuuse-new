@@ -1,0 +1,82 @@
+<template>
+<section class="bg-gray-light lg:py-20 lg:px-20 px-8">
+	<section class="justify-between banner lg:flex py-10">
+		<div class="hidden lg:flex lg:w-6/12">
+			<img class="hm-hero" src="../assets/img/hero2.png" alt />
+		</div>
+		<div class="self-center lg:w-5/12 text-neutral">
+			<h1 class="header2">
+				Opportunity is everywhere. The key is to develop the vision to see it.
+			</h1>
+			<p class="headline pt-8">
+				We are a Technology Talent Development company that helps people learn premium technological skills virtually.
+				We also
+				partner with companies to hire the best talents and invest in talent development.
+			</p>
+		</div>
+	</section>
+	<div class="rounded-lg bg-white shadow justify-around md:flex py-5 my-8">
+		<div class="text-center pb-4">
+			<h1 class="text-primary header2 md:pb-4">
+				1k+
+			</h1>
+			<p class="header6">Members in the Chuuse <br> Learning Community</p>
+		</div>
+		<div class="text-center self-center pb-4">
+			<h1 class="text-primary header2 md:pb-4">
+				50+
+			</h1>
+			<p class="header6">Engineers Placed</p>
+		</div>
+		<div class="text-center self-center">
+			<h1 class="text-primary header2 md:pb-4">
+				20+
+			</h1>
+			<p class="header6">Participating Companies</p>
+		</div>
+	</div>
+	<article class="justify-between lg:flex pt-10 pb-20">
+		<div class="self-center lg:w-6/12">
+			<h1 class="header3 text-primary">
+				What is Chuuse About ?
+			</h1>
+			<p class="headline pt-8">
+				Chuuse is an elite technology development company that equips high potential individuals with world-class technological
+				and leadership skills as well as combined practical exposure through real-life projects and corporate placements. Also
+				ensuring that our talents are enabled to launch their careers in tech world successfully. We are also helping
+				professionals from all over the world learn skills and develop capabilities to thrive in their respective workplaces and
+				also stay relevant.
+			</p>
+			<p class="headline pt-8">
+				Today we have people from all facet of life join our virtual learning programs, our talent incubation and talent pool
+				from all over . With an ecosystem of over 10000 talents,we are serving as the bridge to educate and connect talents. We
+				are a leading tech talent development company for emerging economies.
+			</p>
+		</div>
+		<div class="hidden lg:flex lg:w-4/12">
+			<img class="hm-hero" src="../assets/img/what.png" alt />
+		</div>
+	</article>
+</section>
+</template>
+<script>
+
+</script>
+<style lang="scss">
+@import "./assets/scss/mixin.scss";
+.hm-hero {
+  @include md {
+    width: 500px;
+  height: 100%;
+  object-fit: contain;
+  }
+  @include xl{
+    width: 100%;
+  height: 100%;
+  object-fit: contain;
+  }
+}
+.shadow{
+	box-shadow: rgba(24, 15, 18, 0.12);
+}
+</style>
