@@ -33,13 +33,13 @@
           ">
 					<nuxt-link to="/" class="focus:text-primary">Home</nuxt-link>
 					<nuxt-link to="/about" class="focus:text-primary">About</nuxt-link>
-					<nuxt-link class="focus:text-primary" to="/">Blog</nuxt-link>
-					<nuxt-link to="/" class="focus:text-primary">Contact</nuxt-link>
+					<nuxt-link class="focus:text-primary" to="/n">Blog</nuxt-link>
+					<nuxt-link to="/m" class="focus:text-primary">Contact</nuxt-link>
 				</nav>
 			</div>
 			<div class="hidden lg:flex flex-col lg:flex-row lg:items-center menu">
 				<nav class="flex flex-no-wrap xl:ml-30">
-					<nuxt-link to="/" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
+					<nuxt-link to="/k" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
 					<div class="py-10">
 						<a href="" class="btn-primary hover:text-white">
 							Join Talent Pool &rightarrow;
