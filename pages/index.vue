@@ -1,16 +1,16 @@
 <template>
   <div class="">
-    <section class="bg-gray-light justify-between lg:pt-32 lg:px-20 px-8 banner lg:flex pt-20">
+    <section class="bg-gray-light justify-between lg:pt-32 lg:px-20 px-8 banner lg:flex pt-24">
       <div class="self-center lg:w-6/12">
-        <h1 class="header1">
+        <h1 class="md:header1 header3">
           Ready to build a <span class="text-primary">Career</span> in <i class="underlined">Tech</i>?
         </h1>
         <p class="headline pt-8">
           Join a well curated network of top-notch experts, by getting trained and recruited for remote and freelance projects
           from various high-paying businesses, top cutting-edge startups, and global corporations.
         </p>
-        <div class="py-10 flex">
-          <a href="" class="btn-primary mr-10 p-4 hover:text-white">
+        <div class="py-10 md:flex">
+          <a href="" class="btn-primary mr-10 md:p-4 hover:text-white">
             Get Started &rightarrow;
           </a>
          <div class="flex justify-center self-center">
@@ -26,7 +26,7 @@
       </div>
     </section>
     <section class="bg-gray-medDark lg:px-20 px-8 py-10">
-      <div class="flex justify-between flex-wrap gap-y-10 gap-x-4">
+      <div class="flex lg:justify-between flex-wrap gap-y-10 gap-x-4">
         <h2 class="header7 text-primary self-center">We have built:</h2>
         <div class="">
           <img src="../assets/img/partner1.png" alt="" class="">
@@ -142,7 +142,7 @@
     <section class="bg-gray-light text-center py-10 lg:px-20 px-8 banner">
       <h1 class="text-tertiary header6 py-5">Our Partnership</h1>
       <div class="lg:flex justify-center pb-10">
-        <div class="flex justify-between flex-wrap gap-y-10 gap-x-4">
+        <div class="flex md:justify-between flex-wrap gap-y-10 gap-x-4">
           <div class="">
             <img src="../assets/img/bio1.png" alt="" class="">
           </div>

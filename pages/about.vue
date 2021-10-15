@@ -1,5 +1,5 @@
 <template>
-<section class="bg-gray-light lg:py-20 lg:px-20 px-8">
+<section class="bg-gray-light pt-24 lg:py-20 lg:px-20 px-8">
 	<section class="justify-between banner lg:flex py-10">
 		<div class="hidden lg:flex lg:w-6/12">
 			<img class="hm-hero" src="../assets/img/hero2.png" alt />
@@ -15,7 +15,7 @@
 			</p>
 		</div>
 	</section>
-	<div class="rounded-lg bg-white shadow justify-around md:flex py-5 my-8">
+	<div class="rounded-lg bg-white px-4 md:px-0 shadow justify-around md:flex py-5 my-8">
 		<div class="text-center pb-4">
 			<h1 class="text-primary header2 md:pb-4">
 				1k+
