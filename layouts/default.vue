@@ -33,8 +33,8 @@
           ">
 					<nuxt-link to="/" class="focus:text-primary">Home</nuxt-link>
 					<nuxt-link to="/about" class="focus:text-primary">About</nuxt-link>
-					<nuxt-link class="focus:text-primary" to="/j">Blog</nuxt-link>
-					<nuxt-link to="/k" class="focus:text-primary">Contact</nuxt-link>
+					<nuxt-link class="focus:text-primary" to="/">Blog</nuxt-link>
+					<nuxt-link to="/" class="focus:text-primary">Contact</nuxt-link>
 				</nav>
 			</div>
 			<div class="hidden lg:flex flex-col lg:flex-row lg:items-center menu">
