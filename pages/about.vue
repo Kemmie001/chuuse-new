@@ -16,13 +16,13 @@
 		</div>
 	</section>
 	<div class="rounded-lg bg-white px-4 md:px-0 shadow justify-around md:flex py-5 my-8">
-		<div class="text-center pb-4">
+		<div class="text-center pb-10 md:pb-4">
 			<h1 class="text-primary header2 md:pb-4">
 				1k+
 			</h1>
 			<p class="header6">Members in the Chuuse <br> Learning Community</p>
 		</div>
-		<div class="text-center self-center pb-4">
+		<div class="text-center self-center pb-10 md:pb-4">
 			<h1 class="text-primary header2 md:pb-4">
 				50+
 			</h1>

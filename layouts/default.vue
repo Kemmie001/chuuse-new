@@ -34,7 +34,7 @@
 					<nuxt-link to="/" class="focus:text-primary">Home</nuxt-link>
 					<nuxt-link to="/about" class="focus:text-primary">About</nuxt-link>
 					<nuxt-link class="focus:text-primary" to="/n">Blog</nuxt-link>
-					<nuxt-link to="/m" class="focus:text-primary">Contact</nuxt-link>
+					<nuxt-link to="/contact" class="focus:text-primary">Contact</nuxt-link>
 				</nav>
 			</div>
 			<div class="hidden lg:flex flex-col lg:flex-row lg:items-center menu">
@@ -66,7 +66,7 @@
 							</nuxt-link>
 							<nuxt-link to="/about" class="pr-4 focus:text-primary">About</nuxt-link>
 							<nuxt-link class="pr-4 focus:text-primary" to="/j">Blog</nuxt-link>
-							<nuxt-link to="/" class="focus:text-primary">Contact</nuxt-link>
+							<nuxt-link to="/contact" class="focus:text-primary">Contact</nuxt-link>
 							<nuxt-link to="/" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
 							<div class="w-1/2 pl-5 mt-4">
 								<a to="/p" class="btn-primary text-white p-4 hover:text-white">

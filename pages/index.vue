@@ -2,7 +2,7 @@
   <div class="">
     <section class="bg-gray-light justify-between lg:pt-32 lg:px-20 px-8 banner lg:flex pt-24">
       <div class="self-center lg:w-6/12">
-        <h1 class="md:header1 header3">
+        <h1 class="header1">
           Ready to build a <span class="text-primary">Career</span> in <i class="underlined">Tech</i>?
         </h1>
         <p class="headline pt-8">
@@ -10,10 +10,10 @@
           from various high-paying businesses, top cutting-edge startups, and global corporations.
         </p>
         <div class="py-10 md:flex">
-          <a href="" class="btn-primary mr-10 md:p-4 hover:text-white">
+          <nuxt-link to="/getStarted" class="btn-primary md:mr-10 p-4 hover:text-white">
             Get Started &rightarrow;
-          </a>
-         <div class="flex justify-center self-center">
+          </nuxt-link>
+         <div class="flex pt-10 md:pt-0">
             <a href="#" class="flex justify-center self-center shadow-md rounded-full h-12 w-12 bg-white">
               <img class="w-3 mx-auto" src="../assets/img/play.svg" alt="">
             </a>
@@ -26,26 +26,41 @@
       </div>
     </section>
     <section class="bg-gray-medDark lg:px-20 px-8 py-10">
-      <div class="flex lg:justify-between flex-wrap gap-y-10 gap-x-4">
-        <h2 class="header7 text-primary self-center">We have built:</h2>
-        <div class="">
-          <img src="../assets/img/partner1.png" alt="" class="">
-        </div>
-        <div class="">
-          <img src="../assets/img/partner6.png" alt="" class="">
-        </div>
-        <div class="">
-          <img src="../assets/img/partner5.png" alt="" class="">
-        </div>
-        <div class="">
-          <img src="../assets/img/partner4.png" alt="" class="">
-        </div>
-        <div class="">
-          <img src="../assets/img/partner3.png" alt="" class="">
-        </div>
-        <div class="">
-          <img src="../assets/img/partner2.png" alt="" class="">
-        </div>
+      <div class="md:flex gap-x-10">
+        <h2 class="header7 self-center text-primary">We have built:</h2>
+        <carousel :paginationEnabled="false" :loop="true" :perPageCustom=" [[320, 4], [1080, 4]]"  
+        class="flex lg:justify-center self-center gap-x-10 mt-10 md:mt-0 md:w-10/12" :autoplay="true" :navigate-to="someLocalProperty" :mouse-drag="false">
+          <slide>
+            <div class="mx-auto">
+              <img src="../assets/img/partner1.png" alt="" class="w-20 md:w-48">
+            </div>
+          </slide>
+          <slide>
+            <div class="mx-auto">
+              <img src="../assets/img/partner6.png" alt="" class="w-14 md:w-32 md:h-20">
+            </div>
+          </slide>
+          <slide>
+            <div class="mx-auto">
+              <img src="../assets/img/partner5.png" alt="" class="w-20 md:w-48 ">
+            </div>
+          </slide>
+          <slide>
+            <div class="mx-auto">
+              <img src="../assets/img/partner4.png" alt="" class="w-20 md:w-48 ">
+            </div>
+          </slide>
+          <slide>
+            <div class="mx-auto">
+              <img src="../assets/img/partner3.png" alt="" class="w-20 md:w-48 ">
+            </div>
+          </slide>
+          <slide>
+            <div class="mx-auto">
+              <img src="../assets/img/partner2.png" alt="" class="w-32">
+            </div>
+          </slide>
+        </carousel> 
       </div>
     </section>
     <section class="bg-gray-light justify-between py-20 lg:px-20 px-5 lg:flex">
@@ -97,7 +112,7 @@
       </div>
     </section>
     <section class="bg-primary text-white lg:px-20 px-8 pt-10 pb-16">
-      <h1 class="header3 py-5 text-center">Technological Skills you want to build a career in</h1>
+      <h1 class="header4 py-5 text-center">Technological Skills you want to build a career in</h1>
       <h2 class="header7 mb-14 text-center">Access a variety of courses that will make you Job-ready and earn cool cash in Tech</h2>
       <div class="flex px-10 justify-between flex-wrap gap-y-10 gap-x-5 pb-20 ">
         <div class="">
@@ -143,24 +158,57 @@
       <h1 class="text-tertiary header6 py-5">Our Partnership</h1>
       <div class="lg:flex justify-center pb-10">
         <div class="flex md:justify-between flex-wrap gap-y-10 gap-x-4">
-          <div class="">
+          <div class="mx-auto">
             <img src="../assets/img/bio1.png" alt="" class="">
           </div>
-          <div class="">
+          <div class="mx-auto">
             <img src="../assets/img/bio2.png" alt="" class="">
           </div>
-          <div class="">
+          <div class="mx-auto">
             <img src="../assets/img/bio3.png" alt="" class="">
           </div>
-          <div class="">
+          <div class="mx-auto">
             <img src="../assets/img/bio4.png" alt="" class="">
           </div>
       </div>
       </div>
+      <h1 class="text-primary header3 py-5">Testimonies</h1>
+      <div class="lg:mx-28 mb-20">
+        <ClientOnly>
+          <carousel class="flex justify-center w-full" 
+          :paginationEnabled="false"
+          :per-page-custom="[
+            [320, 1],
+            [1020, 1],
+          ]" :mouse-drag="true" 
+          >
+            <slide v-for="testimonial in testimonials" :key="testimonial.id" class="slide-content">
+              <div class="flex flex-nowrap mt-5 items-center">
+                <div class="md:z-10">
+                  <img class="hidden md:flex lg:w-full" :src="testimonial.image" :alt="testimonial.name" />
+                </div>
+                <span class="md:-ml-5 px-10 py-10 bg-white shadow-md rounded-xl">
+                  <p class="pb-16 text-left para1">{{ testimonial.message }}</p>
+                  <span class="flex pb-5">
+                    <p class="font-bold text-primary">
+                      {{ testimonial.name }}
+                    </p> <p class="text-medDark px-3 font-bold">-</p>
+                    <p class="text-sm para1">{{ testimonial.program }}</p>
+                  </span>
+                  <div class='flex justify-end'>
+                    <button class='text-primary pr-3 headline' @click="previous">&#60;</button>
+                    <button class='text-primary headline' @click="next">&#62;</button>
+                  </div>
+                </span>
+              </div>
+            </slide>
+          </carousel>
+        </ClientOnly>
+      </div>
       <div class="md:flex w-full md:justify-between my-5 py-8 border-t-2 border-b-2 border-gray-medium">
         <div class="text-left md:w-8/12">
           <h1 class="header6">Get hired with global companies today with your tech skills</h1>
-          <p class="headline">Tell us what you do, we’ll take care of the rest.</p>
+          <p class="headline pt-2">Tell us what you do, we’ll take care of the rest.</p>
         </div>
         <div class="self-center pt-8 md:pt-0 text-left">
           <a to="/p" class="btn-primary text-white px-10 lg:px-16 py-4 hover:text-white">
@@ -173,7 +221,45 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data(){
+    return{
+      testimonials: [
+        {
+          name: 'Fiona Ibhazoboa',
+          message:
+            'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
+          program: 'Talent Incubation',
+          image: 'test1.png',
+        },
+        {
+          name: 'Fiona Barnes',
+          message:
+            'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
+          program: 'Talent Incubation',
+          image: 'test1.png',
+        },
+        {
+          name: 'Fiona Barnes',
+          message:
+            'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
+          program: 'Talent Incubation',
+          image: 'test1.png',
+        },
+      ],
+    }
+  },
+methods: {
+  next() {
+    const first = this.testimonials.shift();
+    this.testimonials = this.testimonials.concat(first);
+  },
+  previous() {
+    const last = this.testimonials.pop();
+    this.testimonials = [last].concat(this.testimonials);
+  }
+}
+}
 </script>
 <style lang="scss" scoped>
   @import "./assets/scss/mixin.scss";
@@ -198,6 +284,12 @@ export default {}
     background-size: contain;
     background-repeat: no-repeat;
   } */
+}
+.header1{
+  @include sm {
+    font-size: 40px;
+    line-height: 50px;
+  }
 }
 .hm-hero {
   @include md {

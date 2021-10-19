@@ -150,7 +150,7 @@
 					</div>
 					<h1 class="header7 my-4">Sign up to our newsletter</h1>
 					<div class="mx-5 lg:mx-0 form-group bg-gray-light rounded-lg flex gap-x-4 md:justify-between">
-						<input class="focus:outline-none md:ml-4 para1 text-gray-medDark" type="email" name="" placeholder="Your email address">
+						<input class="focus:outline-none ml-4 para1 text-gray-medDark" type="email" name="" placeholder="Your email address">
 						<button class="text-white p-3 m-2 bg-gray-dark rounded-lg focus:outline-none">GO</button>
 					</div>
 				</div>
