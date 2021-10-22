@@ -39,7 +39,7 @@
 			</div>
 			<div class="hidden lg:flex flex-col lg:flex-row lg:items-center menu">
 				<nav class="flex flex-no-wrap xl:ml-30">
-					<nuxt-link to="/k" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
+					<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
 					<div class="py-10">
 						<a href="" class="btn-primary hover:text-white">
 							Join Talent Pool &rightarrow;
@@ -67,11 +67,11 @@
 							<nuxt-link to="/about" class="pr-4 focus:text-primary">About</nuxt-link>
 							<nuxt-link class="pr-4 focus:text-primary" to="/j">Blog</nuxt-link>
 							<nuxt-link to="/contact" class="focus:text-primary">Contact</nuxt-link>
-							<nuxt-link to="/" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
-							<div class="w-1/2 pl-5 mt-4">
-								<a to="/p" class="btn-primary text-white p-4 hover:text-white">
+							<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
+							<div class="">
+								<nuxt-link to="/p" class="btn-primary text-white hover:text-white">
 									Join Talent Pool &rightarrow;
-								</a>
+								</nuxt-link>
 							</div>
 						</nav>
 					</menu>

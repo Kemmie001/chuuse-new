@@ -1,12 +1,12 @@
 <template>
-	<section class="bg-gray-light pt-32 lg:py-20 lg:px-20 px-8">
-		<div class="text-center py-10">
+	<section class="bg-gray-light pt-24 md:pt-32 lg:py-20 lg:px-20 px-8">
+		<div class="md:text-center">
 			<h1 class="header2">Get In Touch!</h1>
 			<p class="headline">Fill out the form and our Team will get back to you within 24 hours</p>
 		</div>
-		<div class="rounded-3xl bg-primary text-white px-10 shadow py-10 my-8">
+		<div class="rounded-3xl bg-primary text-white p-4 md:px-10 shadow md:py-10 my-8">
 			<form action="" class="">
-				<div class="md:flex justify-between gap-x-20">
+				<div class="md:flex md:justify-between gap-x-20">
 					<div class="md:w-5/12">
 						<div class="form-group pb-10">
 							<label for="name">Name: *</label>
