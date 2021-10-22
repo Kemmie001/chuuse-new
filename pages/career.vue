@@ -46,17 +46,16 @@
 			<h1 class="header3 pt-4 text-center">
 				How it Works?
 			</h1>
-			<article class="justify-between lg:flex lg:pt-16 pt-5 pb-20 lg:px-20 px-8">	
+			<article class="justify-between lg:flex lg:pt-16 pt-5 pb-20 lg:px-20 px-5">	
 				<div class="self-center lg:w-6/12">
-					<ul class="para1 pl-5 pt-5">
-						<li class="py-5 mb-5
-						md:mb-10 
+					<ul class="para1 pt-5">
+						<li class="py-5 mb-8
 						bg-white 
 						shadow-md 
 						hover:bg-gray-dark 
 						hover:text-white 
 						rounded-xl 
-						pl-4">
+						px-4">
 							<span class="flex">
 								<div class="rounded-full p-2 flex justify-center self-center bg-white">
 									<img src="../assets/img/recruitment.svg" alt="">
@@ -66,7 +65,7 @@
 							<p class="para1 mt-2">We screen to identify fast and quick learners to become a part of Chuuse Software
 								Engineers</p>
 						</li>
-						<li class="py-5 mb-5 md:mb-10  bg-white shadow-md  hover:bg-gray-dark hover:text-white rounded-xl pl-4">
+						<li class="py-5 mb-8 bg-white shadow-md  hover:bg-gray-dark hover:text-white rounded-xl px-4">
 							<span class="flex">
 								<div class="rounded-full p-2 flex justify-center self-center bg-white">
 									<img src="../assets/img/presentation.svg" alt="">
@@ -75,7 +74,7 @@
 							</span>
 							<p class="para1 mt-2">We deliver an intensive 12 months program (full-stack software development + soft skills)</p>
 						</li>
-						<li class="py-5 bg-white shadow-md  hover:bg-gray-dark hover:text-white rounded-xl pl-4">
+						<li class="py-5 bg-white shadow-md  hover:bg-gray-dark hover:text-white rounded-xl px-4">
 							<span class="flex">
 								<div class="rounded-full p-2 flex justify-center self-center bg-white">
 									<img src="../assets/img/startup.svg" alt="">
@@ -92,7 +91,7 @@
 			</article>
 		</section>
 		<div class="ready flex justify-center self-center py-10">
-			<div class="pt-5">
+			<div class="pt-5 text-center">
 				<h1 class="header4 text-white">Ready to become the Chuuse’n dev ?</h1>
 				<div class="py-5 flex justify-center">
 					<nuxt-link to="/apply" class="btn-primary md:mr-10 p-4 hover:text-white">
@@ -124,7 +123,7 @@
 	.header3 {
 		@include sm {
 			font-size: 32px;
-			line-height: 36px;
+			line-height: 44px;
 		}
 	}
 	.header4 {
@@ -135,13 +134,13 @@
 	}
 	.headline {
 		@include sm {
-			font-size: 16px;
+			font-size: 18px;
 			line-height: 24px;
 		}
 	}
 	.para1 {
-		@include sm {
-			font-size: 14px;
+		@include sm {	
+			font-size: 16px;
 			line-height: 22px;
 		}
 	}

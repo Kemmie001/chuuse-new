@@ -1,7 +1,7 @@
 <template>
-	<section class="bg-gray-light pt-24 md:pt-32 lg:py-20 lg:px-20 px-8">
-		<div class="md:text-center">
-			<h1 class="header2">Get In Touch!</h1>
+	<section class="pt-24 md:pt-32 lg:py-20 lg:px-20 px-8">
+		<div class="md:text-center md:pt-5">
+			<h1 class="header3 py-4">Get In Touch!</h1>
 			<p class="headline">Fill out the form and our Team will get back to you within 24 hours</p>
 		</div>
 		<div class="rounded-3xl bg-primary text-white p-4 md:px-10 shadow md:py-10 my-8">
@@ -41,6 +41,12 @@
 </script>
 <style lang="scss" scoped>
 	@import "./assets/scss/mixin.scss";
+	.header3 {
+		@include sm {
+			font-size: 32px;
+			line-height: 44px;
+		}
+	}
 	input, textarea{
 		background: none;
 		border: 1px solid white;

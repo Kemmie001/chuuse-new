@@ -68,11 +68,9 @@
 							<nuxt-link class="pr-4 focus:text-primary" to="/j">Blog</nuxt-link>
 							<nuxt-link to="/contact" class="focus:text-primary">Contact</nuxt-link>
 							<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
-							<div class="">
-								<nuxt-link to="/p" class="btn-primary text-white hover:text-white">
+								<nuxt-link to="/p" class="btn-primary text-white hover:text-white w-10/12">
 									Join Talent Pool &rightarrow;
 								</nuxt-link>
-							</div>
 						</nav>
 					</menu>
 				</div>

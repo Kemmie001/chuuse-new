@@ -1,10 +1,10 @@
 <template>
-	<section class="bg-gray-light pt-32 lg:py-20 lg:px-20 px-8">
+	<section class="bg-gray-light pt-24 md:pt-32 lg:py-20 lg:px-20 px-8">
 		<div class="text-center py-10">
-			<h1 class="header2">Build A <span class="text-primary">Tech Career</span> Today</h1>
+			<h1 class="header3 py-3">Build A <span class="text-primary">Tech Career</span> Today</h1>
 			<p class="headline">Provide your details below and we will follow up in less than 24Hrs.</p>
 		</div>
-		<div class="px-10 pb-10 my-8">
+		<div class="md:px-10 pb-10 my-8">
 			<form action="" class="">
 				<div class="md:flex justify-between gap-x-20">
 					<div class="md:w-5/12">
@@ -69,7 +69,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="flex justify-center my-10">
+				<div class="flex justify-center my-5">
 					<button href="" class="btn-primary mr-10 px-10 lg:px-32 py-4">
 						Submit
 					</button>
@@ -84,6 +84,12 @@
 <style lang="scss" scoped>
 	@import "./assets/scss/mixin.scss";
 
+	.header3 {
+		@include sm {
+			font-size: 32px;
+			line-height: 44px;
+		}
+	}
 	input,
 	textarea,
 	select {
