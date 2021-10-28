@@ -5,65 +5,68 @@
         <h1 class="header1">
           Ready to build a <span class="text-primary">Career</span> in <i class="underlined">Tech</i>?
         </h1>
-        <p class="headline pt-8">
-          Join a well curated network of top-notch experts, by getting trained and recruited for remote and freelance projects
+        <p class="headline pt-6">
+          Join a well curated network of top-notch experts, by getting trained and recruited for remote and freelance
+          projects
           from various high-paying businesses, top cutting-edge startups, and global corporations.
         </p>
         <div class="py-10 md:flex">
           <nuxt-link to="/getStarted" class="btn-primary md:mr-10 p-4 hover:text-white">
             Get Started &rightarrow;
           </nuxt-link>
-         <div class="flex pt-10 md:pt-0">
+          <div class="flex pt-10 md:pt-0">
             <a href="#" class="flex justify-center self-center shadow-md rounded-full h-12 w-12 bg-white">
               <img class="w-3 mx-auto" src="../assets/img/play.svg" alt="">
             </a>
-            <a href="#" class="pl-4 text-primary self-center cursor-pointer bold-button">Learn More on our Talent Pool</a>
-         </div>
+            <a href="#" class="pl-4 text-primary self-center cursor-pointer bold-button">Learn More on our Talent
+              Pool</a>
+          </div>
         </div>
       </div>
       <div class="hidden lg:flex lg:w-6/12">
         <img class="hm-hero" src="../assets/img/hero.png" alt />
       </div>
     </section>
-    <section class="bg-gray-medDark lg:px-20 px-8 py-10">
+    <section class="bg-gray-medDark lg:px-20 px-8 py-8">
       <div class="md:flex gap-x-10">
         <h2 class="header7 self-center text-primary">We have built:</h2>
-        <carousel :paginationEnabled="false" :loop="true" :perPageCustom=" [[320, 4], [1080, 4]]"  
-        class="flex lg:justify-center self-center gap-x-10 mt-10 md:mt-0 md:w-10/12" :autoplay="true" :navigate-to="someLocalProperty" :mouse-drag="false">
+        <carousel :paginationEnabled="false" :loop="true" :perPageCustom=" [[320, 4], [1080, 4]]"
+          class="flex w-full lg:justify-center self-center gap-x-10 mt-10 md:mt-0 md:w-10/12" :autoplay="true"
+          :navigate-to="someLocalProperty" :mouse-drag="false">
           <slide>
-            <div class="mx-auto">
-              <img src="../assets/img/partner1.png" alt="" class="w-20 md:w-48">
+            <div class="">
+              <img src="../assets/img/partner1.png" alt="" class="w-20 md:w-32">
             </div>
           </slide>
           <slide>
-            <div class="mx-auto">
-              <img src="../assets/img/partner6.png" alt="" class="w-14 md:w-32 md:h-20">
+            <div class="">
+              <img src="../assets/img/partner6.png" alt="" class="w-14 md:w-20 md:h-20">
             </div>
           </slide>
           <slide>
-            <div class="mx-auto">
-              <img src="../assets/img/partner5.png" alt="" class="w-20 md:w-48 ">
+            <div class="">
+              <img src="../assets/img/partner5.png" alt="" class="w-20 md:w-32 ">
             </div>
           </slide>
           <slide>
-            <div class="mx-auto">
-              <img src="../assets/img/partner4.png" alt="" class="w-20 md:w-48 ">
+            <div class="">
+              <img src="../assets/img/partner4.png" alt="" class="w-20 md:w-32 ">
             </div>
           </slide>
           <slide>
-            <div class="mx-auto">
-              <img src="../assets/img/partner3.png" alt="" class="w-20 md:w-48 ">
+            <div class="">
+              <img src="../assets/img/partner3.png" alt="" class="w-20 md:w-32 ">
             </div>
           </slide>
           <slide>
-            <div class="mx-auto">
-              <img src="../assets/img/partner2.png" alt="" class="w-32">
+            <div class="">
+              <img src="../assets/img/partner2.png" alt="" class="w-20 md:w-32">
             </div>
           </slide>
-        </carousel> 
+        </carousel>
       </div>
     </section>
-    <section class="bg-gray-light justify-between py-20 lg:px-20 px-5 lg:flex">
+    <section class="bg-gray-light justify-between py-20 lg:px-20 px-8 lg:flex">
       <div class="hidden lg:flex lg:w-4/12">
         <img class="hm-hero" src="../assets/img/why.png" alt />
       </div>
@@ -77,7 +80,8 @@
               Virtual Service 💻
             </h1>
             <p class="para1">
-              Register and be a part of chuuse on the go using your internet with no physical distance coverage required.Get access to
+              Register and be a part of chuuse on the go using your internet with no physical distance coverage
+              required.Get access to
               everyone of our services at the comfort of your homes anywhere in the world
             </p>
           </div>
@@ -86,7 +90,8 @@
               Talent Quality ✨
             </h1>
             <p class="para1">
-              There is an 100% assurance of the quality of talents you get from chuuse.We also train, select and recruit the top tech
+              There is an 100% assurance of the quality of talents you get from chuuse.We also train, select and recruit
+              the top tech
               talents in each cities we source from.
             </p>
           </div>
@@ -95,7 +100,8 @@
               Service Reliability 🚀
             </h1>
             <p class="para1">
-              Expect reliability not just from our talents but also from chuuse as a whole.We ensure consistency there is consistency
+              Expect reliability not just from our talents but also from chuuse as a whole.We ensure consistency there
+              is consistency
               in results given because we only have the best talents to offer here at chuuse
             </p>
           </div>
@@ -104,7 +110,8 @@
               Diversification of Talents 🎨
             </h1>
             <p class="para1">
-              Our talent recruitment focuses on sourcing, recruiting, interviewing and hiring high quality talents in underrepresented
+              Our talent recruitment focuses on sourcing, recruiting, interviewing and hiring high quality talents in
+              underrepresented
               groups, including women, people with disabilities and individuals from different racial and ethnic groups.
             </p>
           </div>
@@ -113,7 +120,8 @@
     </section>
     <section class="bg-primary text-white lg:px-20 px-8 pt-10 pb-16">
       <h1 class="header4 py-5 text-center">Technological Skills you want to build a career in</h1>
-      <h2 class="header7 mb-14 text-center">Access a variety of courses that will make you Job-ready and earn cool cash in Tech</h2>
+      <h2 class="header7 mb-14 text-center">Access a variety of courses that will make you Job-ready and earn cool cash
+        in Tech</h2>
       <div class="flex px-10 justify-between flex-wrap gap-y-10 gap-x-5 pb-20 ">
         <div class="">
           <ul class="list-disc">
@@ -170,18 +178,15 @@
           <div class="mx-auto">
             <img src="../assets/img/bio4.png" alt="" class="">
           </div>
-      </div>
+        </div>
       </div>
       <h1 class="text-primary header3 py-5">Testimonies</h1>
       <div class="lg:mx-28 mb-20">
         <ClientOnly>
-          <carousel class="flex justify-center w-full" 
-          :paginationEnabled="false"
-          :per-page-custom="[
+          <carousel class="flex justify-center w-full" :paginationEnabled="false" :per-page-custom="[
             [320, 1],
             [1020, 1],
-          ]" :mouse-drag="true" 
-          >
+          ]" :mouse-drag="true">
             <slide v-for="testimonial in testimonials" :key="testimonial.id" class="slide-content">
               <div class="flex flex-nowrap mt-5 items-center">
                 <div class="md:z-10">
@@ -192,7 +197,8 @@
                   <span class="flex pb-5">
                     <p class="font-bold text-primary">
                       {{ testimonial.name }}
-                    </p> <p class="text-medDark px-3 font-bold">-</p>
+                    </p>
+                    <p class="text-medDark px-3 font-bold">-</p>
                     <p class="text-sm para1">{{ testimonial.program }}</p>
                   </span>
                   <div class='flex justify-end'>
@@ -221,86 +227,92 @@
 </template>
 
 <script>
-export default {
-  data(){
-    return{
-      testimonials: [
-        {
-          name: 'Fiona Ibhazoboa',
-          message:
-            'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
-          program: 'Talent Incubation',
-          image: 'test1.png',
-        },
-        {
-          name: 'Fiona Barnes',
-          message:
-            'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
-          program: 'Talent Incubation',
-          image: 'test1.png',
-        },
-        {
-          name: 'Fiona Barnes',
-          message:
-            'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
-          program: 'Talent Incubation',
-          image: 'test1.png',
-        },
-      ],
+  export default {
+    data() {
+      return {
+        testimonials: [
+          {
+            name: 'Fiona Ibhazoboa',
+            message:
+              'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
+            program: 'Talent Incubation',
+            image: 'test1.png',
+          },
+          {
+            name: 'Fiona Barnes',
+            message:
+              'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
+            program: 'Talent Incubation',
+            image: 'test1.png',
+          },
+          {
+            name: 'Fiona Barnes',
+            message:
+              'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
+            program: 'Talent Incubation',
+            image: 'test1.png',
+          },
+        ],
+      }
+    },
+    methods: {
+      next() {
+        const first = this.testimonials.shift();
+        this.testimonials = this.testimonials.concat(first);
+      },
+      previous() {
+        const last = this.testimonials.pop();
+        this.testimonials = [last].concat(this.testimonials);
+      }
     }
-  },
-methods: {
-  next() {
-    const first = this.testimonials.shift();
-    this.testimonials = this.testimonials.concat(first);
-  },
-  previous() {
-    const last = this.testimonials.pop();
-    this.testimonials = [last].concat(this.testimonials);
   }
-}
-}
 </script>
 <style lang="scss" scoped>
   @import "./assets/scss/mixin.scss";
+
   i.underlined {
-  position: relative;
-  width: auto;
-  font-style: normal;
-  &::after {
-    content: ' ';
-    display: inline;
-    position: absolute;
-    left: 0;
-    bottom: -80%;
-    width: 100%;
-    height: 100%;
-    background: url('../assets/img/underline.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  /* &.ulong::after {
+    position: relative;
+    width: auto;
+    font-style: normal;
+
+    &::after {
+      content: ' ';
+      display: inline;
+      position: absolute;
+      left: 0;
+      bottom: -80%;
+      width: 100%;
+      height: 100%;
+      background: url('../assets/img/underline.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    /* &.ulong::after {
     background: url('/underline-long.svg');
     background-size: contain;
     background-repeat: no-repeat;
   } */
-}
-.header1{
-  @include sm {
-    font-size: 40px;
-    line-height: 50px;
   }
-}
-.hm-hero {
-  @include md {
-    width: 500px;
-  height: 100%;
-  object-fit: contain;
+
+  .header1 {
+    @include sm {
+      font-size: 40px;
+      line-height: 50px;
+    }
   }
-  @include xl{
-    width: 100%;
-  height: 100%;
-  object-fit: contain;
+
+  .hm-hero {
+    @include md {
+      width: 500px;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @include xl {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
-}
 </style>

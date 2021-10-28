@@ -27,18 +27,25 @@
 					About the Institute
 				</h1>
 				<p class="headline pt-4 md:pt-8">
-					Chuuse Institute is an elite technology development company that equips high potential individuals with world-class
-					technological and leadership skills as well as combined practical exposure through real-life projects and corporate
-					placements. Also ensuring that our talents are enabled to launch their careers in tech world successfully.
+					Chuuse Institute is an elite technology development company that equips high potential individuals
+					with world-class
+					technological and leadership skills as well as combined practical exposure through real-life
+					projects and corporate
+					placements. Also ensuring that our talents are enabled to launch their careers in tech world
+					successfully.
 				</p>
 				<p class="headline pt-4">
-					Our training program is a 12 months intensive course programme that is a platform to launching a successful career as a
-					tech talent. At the end of the program, we guarantee you will become a competitive, industry-ready to take up an
+					Our training program is a 12 months intensive course programme that is a platform to launching a
+					successful career as a
+					tech talent. At the end of the program, we guarantee you will become a competitive, industry-ready
+					to take up an
 					entry-level to mid level software engineer job.
 				</p>
 				<ul class="list-disc para1 pl-5 pt-5">
-					<li class="pb-3">We offer a one on one mentorship oppurtunity with top and established industry experts .</li>
-					<li class="pb-3">We have a flexible payment options which allows you pay us after you graduate and secure a job.</li>
+					<li class="pb-3">We offer a one on one mentorship oppurtunity with top and established industry
+						experts .</li>
+					<li class="pb-3">We have a flexible payment options which allows you pay us after you graduate and
+						secure a job.</li>
 				</ul>
 			</div>
 		</article>
@@ -46,7 +53,7 @@
 			<h1 class="header3 pt-4 text-center">
 				How it Works?
 			</h1>
-			<article class="justify-between lg:flex lg:pt-16 pt-5 pb-20 lg:px-20 px-5">	
+			<article class="justify-between lg:flex lg:pt-16 pt-5 pb-20 lg:px-20 px-5">
 				<div class="self-center lg:w-6/12">
 					<ul class="para1 pt-5">
 						<li class="py-5 mb-8
@@ -62,7 +69,8 @@
 								</div>
 								<h1 class="header4 self-center ml-4">Recruitment</h1>
 							</span>
-							<p class="para1 mt-2">We screen to identify fast and quick learners to become a part of Chuuse Software
+							<p class="para1 mt-2">We screen to identify fast and quick learners to become a part of
+								Chuuse Software
 								Engineers</p>
 						</li>
 						<li class="py-5 mb-8 bg-white shadow-md  hover:bg-gray-dark hover:text-white rounded-xl px-4">
@@ -72,7 +80,8 @@
 								</div>
 								<h1 class="header4 self-center ml-4">Training</h1>
 							</span>
-							<p class="para1 mt-2">We deliver an intensive 12 months program (full-stack software development + soft skills)</p>
+							<p class="para1 mt-2">We deliver an intensive 12 months program (full-stack software
+								development + soft skills)</p>
 						</li>
 						<li class="py-5 bg-white shadow-md  hover:bg-gray-dark hover:text-white rounded-xl px-4">
 							<span class="flex">
@@ -81,7 +90,8 @@
 								</div>
 								<h1 class="header4 self-center ml-4">Placement</h1>
 							</span>
-							<p class="para1 mt-2">We match Chuuse engineers and tech talents with our hiring organizations to join their engineering teams full-time</p>
+							<p class="para1 mt-2">We match Chuuse engineers and tech talents with our hiring
+								organizations to join their engineering teams full-time</p>
 						</li>
 					</ul>
 				</div>
@@ -114,7 +124,7 @@
 <style lang="scss">
 	@import "./assets/scss/mixin.scss";
 
-	.header2 {
+	/* .header2 {
 		@include sm {
 			font-size: 36px;
 			line-height: 48px;
@@ -143,7 +153,7 @@
 			font-size: 16px;
 			line-height: 22px;
 		}
-	}
+	} */
 	.hm-hero {
 		@include md {
 			width: 500px;
@@ -157,8 +167,9 @@
 			object-fit: contain;
 		}
 	}
-	.ready{
-		background:  linear-gradient(rgba(24, 15, 18, 0.5), rgba(24, 15, 18, 0.5)), url('../assets/img/ready.png');
+
+	.ready {
+		background: linear-gradient(rgba(24, 15, 18, 0.5), rgba(24, 15, 18, 0.5)), url('../assets/img/ready.png');
 		background-size: cover;
 		width: 100%;
 	}
