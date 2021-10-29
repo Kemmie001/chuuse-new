@@ -29,7 +29,7 @@
     </section>
     <section class="bg-gray-medDark lg:px-20 px-8 py-8">
       <div class="md:flex gap-x-10">
-        <h2 class="header7 self-center text-primary">We have built:</h2>
+        <h2 class="header7 self-center text-primary">Experience with:</h2>
         <carousel :paginationEnabled="false" :loop="true" :perPageCustom=" [[320, 4], [1080, 4]]"
           class="flex w-full lg:justify-center self-center gap-x-10 mt-10 md:mt-0 md:w-10/12" :autoplay="true"
           :navigate-to="someLocalProperty" :mouse-drag="false">
@@ -217,9 +217,9 @@
           <p class="headline pt-2">Tell us what you do, we’ll take care of the rest.</p>
         </div>
         <div class="self-center pt-8 md:pt-0 text-left">
-          <a to="/p" class="btn-primary text-white px-10 lg:px-16 py-4 hover:text-white">
+          <nuxt-link to="/talent" class="btn-primary text-white px-10 lg:px-16 py-4 hover:text-white">
             Join Talent Pool
-          </a>
+          </nuxt-link>
         </div>
       </div>
     </section>

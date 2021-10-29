@@ -35,7 +35,7 @@
   font-weight: 600;
 }
 .header7 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -65,7 +65,7 @@
   font-weight: 700;
 }
 .headline {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 24px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -116,6 +116,12 @@
   @apply bg-primary;
   border-radius: 8px;
   @apply text-white;
+  @apply bold-button;
+}
+.btn-white {
+  @apply bg-white;
+  border-radius: 8px;
+  @apply text-primary;
   @apply bold-button;
 }
 .btn-secondary {

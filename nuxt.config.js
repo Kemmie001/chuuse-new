@@ -25,6 +25,18 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap',
       },
+      {
+        rel: 'stylesheet',
+        href: 'https://unicons.iconscout.com/release/v4.0.0/css/solid.css',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://unicons.iconscout.com/release/v2.0.1/css/unicons.css',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://unicons.iconscout.com/release/v4.0.0/css/line.css',
+      },
     ]
   },
 

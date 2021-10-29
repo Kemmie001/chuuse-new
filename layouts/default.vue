@@ -41,9 +41,9 @@
 				<nav class="flex flex-no-wrap xl:ml-30">
 					<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
 					<div class="py-10">
-						<a href="" class="btn-primary hover:text-white">
+						<nuxt-link to="/talent" class="btn-primary text-white hover:text-white">
 							Join Talent Pool &rightarrow;
-						</a>
+						</nuxt-link>
 					</div>
 				</nav>
 			</div>
@@ -51,7 +51,7 @@
 				Bars
 			</a>
 		</div>
-			<Nuxt />
+		<Nuxt />
 		<publicFooter />
 		<div class="flex lg:hidden flex-col items-center w-full slot-holder">
 			<div :class="{ open: isOpen }" class="mobile-menu-new-holder" @click.self="toggleMenu">
@@ -67,10 +67,11 @@
 							<nuxt-link to="/about" class="pr-4 focus:text-primary">About</nuxt-link>
 							<nuxt-link class="pr-4 focus:text-primary" to="/j">Blog</nuxt-link>
 							<nuxt-link to="/contact" class="focus:text-primary">Contact</nuxt-link>
-							<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
-								<nuxt-link to="/p" class="btn-primary text-white hover:text-white w-10/12">
-									Join Talent Pool &rightarrow;
-								</nuxt-link>
+							<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech
+							</nuxt-link>
+							<nuxt-link to="/talent" class="btn-primary text-white hover:text-white w-10/12">
+								Join Talent Pool &rightarrow;
+							</nuxt-link>
 						</nav>
 					</menu>
 				</div>
@@ -205,15 +206,6 @@
 		outline: none;
 	}
 
-	.bg-footer {
-		background: #010165;
-	}
-
-	.header-color {
-		color: #f2994a;
-		text-transform: uppercase;
-	}
-
 	.menu>.menu-links {
 		padding: 20px 5px;
 	}
@@ -274,13 +266,6 @@
 		border-bottom: none;
 	}
 
-	.btn-nav {
-		border-radius: 5px;
-		padding: 7px 15px;
-		background-color: #ffffff;
-		color: #010165;
-	}
-
 	.logo {
 		width: 40px;
 		object-fit: contain;
@@ -323,11 +308,6 @@
 	.slide-enter,
 	.slide-leave-to {
 		transform: scaleY(0);
-	}
-
-	footer a:hover {
-		text-decoration: underline;
-		color: #c8c8ff;
 	}
 
 	.drop-down-holder {
@@ -420,63 +400,6 @@
 		border-radius: 61px;
 		font-size: 16px;
 		font-weight: bold;
-	}
-
-	.link_colored {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 8px 24px;
-		background: #ff6600;
-		border-radius: 10px;
-		font-weight: bold;
-	}
-
-	.link_colored-orange {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 8px 24px;
-		border-radius: 61px;
-		background: #ff6600;
-		font-weight: bold;
-
-		@include sm {
-			@apply text-xs;
-			padding: 6px 16px;
-
-			&.mobile {
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-				padding: 0;
-			}
-		}
-	}
-
-	.link_colored-green {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 16px 24px;
-		background: #2ecc71;
-		border-radius: 61px;
-		font-weight: bold;
-
-		@include sm {
-			@apply text-xs;
-			padding: 6px 16px;
-
-			&.mobile {
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-				padding: 0;
-			}
-		}
 	}
 
 	@media only screen and (max-width: 1028px) {
