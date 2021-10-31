@@ -1,40 +1,5 @@
 <template>
-	<section class="pt-24 md:pt-32 lg:py-20 lg:px-20 px-8">
-		<div class="md:text-center md:pt-5">
-			<h1 class="header3 py-4">Get In Touch!</h1>
-			<p class="headline">Fill out the form and our Team will get back to you within 24 hours</p>
-		</div>
-		<div class="rounded-3xl bg-primary text-white p-4 md:px-10 shadow md:py-10 my-8">
-			<form action="" class="">
-				<div class="md:flex md:justify-between gap-x-20">
-					<div class="md:w-5/12">
-						<div class="form-group pb-10">
-							<label for="name">Name: *</label>
-							<input type="text" required class=" rounded-lg" name="name" placeholder="Your full name" id="">
-						</div>
-						<div class="form-group pb-10">
-							<label for="email">Email Address: *</label>
-							<input type="email" required class=" rounded-lg" name="email" placeholder="Your email address" id="">
-						</div>
-						<div class="form-group pb-10">
-							<label for="phone">Phone Number: *</label>
-							<input type="tel" required class="rounded-lg" name="phone" placeholder="Your phone number" id="">
-						</div>
-					</div>
-					<div class="form-group md:w-5/12 h-full">
-						<label for="phone">Your Message: *</label>
-						<textarea required cols="30" rows="10" class=" rounded-lg" name="phone" placeholder="Type a message...."
-							id=""></textarea>
-					</div>
-				</div>
-				<div class="flex justify-center my-10">
-					<button href="" class="btn-secondary mr-10 px-10 lg:px-16 py-4">
-						Send Message
-					</button>
-				</div>
-			</form>
-		</div>
-	</section>
+	<h1 class="">Not Found</h1>
 </template>
 <script>
 
