@@ -6,15 +6,23 @@
 		</div>
 		<div class="md:px-10 pb-10 my-8">
 			<form action="" class="">
-				<div class="md:flex justify-between gap-x-20">
-					<div class="md:w-5/12">
+				<div class="">
+					<div class="grid md:grid-cols-2 md:justify-between gap-x-20">
 						<div class="form-group pb-10">
 							<label for="name">First Name: *</label>
-							<input type="text" required class=" rounded-lg" name="name" placeholder="Your full name" id="">
+							<input type="text" required class=" rounded-lg" name="name" placeholder="Your first name" id="">
+						</div>
+						<div class="form-group pb-10">
+							<label for="name">Last Name: *</label>
+							<input type="text" required class=" rounded-lg" name="name" placeholder="Your last name" id="">
 						</div>
 						<div class="form-group pb-10">
 							<label for="email">Email Address: *</label>
 							<input type="email" required class=" rounded-lg" name="email" placeholder="Your email address" id="">
+						</div>
+						<div class="form-group pb-10">
+							<label for="phone">Phone Number: *</label>
+							<input type="tel" required class=" rounded-lg" name="phone" placeholder="Your Phone Number" id="">
 						</div>
 						<div class="form-group pb-10">
 							<label for="phone">Highest Level of Education: *</label>
@@ -26,27 +34,6 @@
 							</Select>
 						</div>
 						<div class="form-group pb-10">
-							<label for="phone">Stack you want to learn: *</label>
-							<Select placeholder="Select an option">
-								<option value="web">Web development</option>
-								<option value="Mobile">Mobile App. development</option>
-								<option value="ui">UI/UX</option>
-								<option value="data">Data Science</option>
-								<option value="cloud">Cloud Computing</option>
-								<option value="ml">Machine Learning</option>
-							</Select>
-						</div>
-					</div>
-					<div class="md:w-5/12">
-						<div class="form-group pb-10">
-							<label for="name">Last Name: *</label>
-							<input type="text" required class=" rounded-lg" name="name" placeholder="Your full name" id="">
-						</div>
-						<div class="form-group pb-10">
-							<label for="phone">Phone Number: *</label>
-							<input type="tel" required class=" rounded-lg" name="phone" placeholder="Your email address" id="">
-						</div>
-						<div class="form-group pb-10">
 							<label for="phone">Course Option: *</label>
 							<Select>
 								<option value="be">React</option>
@@ -55,6 +42,17 @@
 								<option value="Python">Python</option>
 								<option value="c">C#</option>
 								<option value="JavaScript">JavaScript</option>
+							</Select>
+						</div>
+						<div class="form-group pb-10">
+							<label for="phone">Stack you want to learn: *</label>
+							<Select placeholder="Select an option">
+								<option value="web">Web development</option>
+								<option value="Mobile">Mobile App. development</option>
+								<option value="ui">UI/UX</option>
+								<option value="data">Data Science</option>
+								<option value="cloud">Cloud Computing</option>
+								<option value="ml">Machine Learning</option>
 							</Select>
 						</div>
 						<div class="form-group pb-10">
@@ -96,7 +94,7 @@
 		background: none;
 		border: 1px solid rgba(127, 126, 126, 1);
 		display: block;
-		padding: 8px;
+		padding: 10px;
 		margin-top: 0.75rem;
 		width: 100%;
 		border-radius: 8px;

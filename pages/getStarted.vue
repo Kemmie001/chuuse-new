@@ -28,12 +28,16 @@
 			connecting with other talented engineers in our community. Cheers to that 🥂!</h2>
 		<div class="pb-10 my-8">
 			<form action="" class="">
-				<div class="md:flex justify-between gap-x-20">
-					<div class="md:w-5/12">
+				<div class="">
+					<div class="grid md:grid-cols-2 md:justify-between gap-x-20">
 						<div class="form-group pb-10">
-							<label for="name">First Name: *</label>
-							<input type="text" required class=" rounded-lg" name="name" placeholder="Your full name"
+							<label for="firstname">First Name: *</label>
+							<input type="text" required class=" rounded-lg" name="firstname" placeholder="Your first name"
 								id="">
+						</div>
+						<div class="form-group pb-10">
+							<label for="lastname">Last Name: *</label>
+							<input type="text" required class=" rounded-lg" name="lastname" placeholder="Your last name" id="">
 						</div>
 						<div class="form-group pb-10">
 							<label for="email">Email Address: *</label>
@@ -41,16 +45,29 @@
 								placeholder="Your email address" id="">
 						</div>
 						<div class="form-group pb-10">
-							<label for="phone">English Proficiency: *</label>
-							<Select placeholder="Select an option">
-								<option value="ssce">Beginner</option>
-								<option value="tet">Intermediate</option>
-								<option value="masters">Advanced</option>
-								<option value="phd">Native</option>
+							<label for="Nationality">Nationality: *</label>
+							<input type="text" required class=" rounded-lg" name="Nationality" placeholder="Your Nationality" id="">
+						</div>
+						<div class="form-group pb-10">
+							<label for="experience">Years of Working Experience: *</label>
+							<Select>
+								<option value="be">1 year</option>
+								<option value="node">2 years</option>
+								<option value="java">3 - 4 years</option>
+								<option value="Python">5 - more years</option>>
 							</Select>
 						</div>
 						<div class="form-group pb-10">
-							<label for="phone">Primary Stack: *</label>
+							<label for="years">Years of Experience With Primary Stack: *</label>
+							<Select>
+								<option value="be">1 year</option>
+								<option value="node">2 years</option>
+								<option value="java">3 - 4 years</option>
+								<option value="Python">5 - more years</option>>
+							</Select>
+						</div>
+						<div class="form-group pb-10">
+							<label for="stack">Primary Stack: *</label>
 							<Select placeholder="Select an option">
 								<option value="web">Web development</option>
 								<option value="Mobile">Mobile App. development</option>
@@ -61,67 +78,41 @@
 							</Select>
 						</div>
 						<div class="form-group pb-10">
-							<label for="file">Resume: *</label>
-							<input type="file" name="file" id="" placeholder="Drag files here or click to add files">
-						</div>
-					</div>
-					<div class="md:w-5/12">
-						<div class="form-group pb-10">
-							<label for="name">Last Name: *</label>
-							<input type="text" required class=" rounded-lg" name="name" placeholder="Your full name"
-								id="">
-						</div>
-						<div class="form-group pb-10">
-							<label for="phone">Nationality: *</label>
-							<input type="text" required class=" rounded-lg" name="phone" placeholder="Your Nationality"
-								id="">
-						</div>
-						<div class="form-group pb-10">
-							<label for="phone">Years of Working Experience: *</label>
-							<Select>
-								<option value="be">1 year</option>
-								<option value="node">2 years</option>
-								<option value="java">3 - 4 years</option>
-								<option value="Python">5 - more years</option>>
-							</Select>
-						</div>
-						<div class="form-group pb-10">
-							<label for="phone">Years of Experience With Primary Stack: *</label>
-							<Select>
-								<option value="be">1 year</option>
-								<option value="node">2 years</option>
-								<option value="java">3 - 4 years</option>
-								<option value="Python">5 - more years</option>>
+							<label for="language">English Proficiency: *</label>
+							<Select placeholder="Select an option">
+								<option value="ssce">Beginner</option>
+								<option value="tet">Intermediate</option>
+								<option value="masters">Advanced</option>
+								<option value="phd">Native</option>
 							</Select>
 						</div>
 						<div class="form-group pb-10">
 							<label for="phone">Years of Working Experience: *</label>
 							<input type="url" placeholder="Your portfolio link" required name="" id="">
 						</div>
+						<div class="form-group pb-10">
+							<label for="Resume">Resume: *</label>
+							<input type="file" name="Resume" id="" placeholder="Drag files here or click to add files">
+						</div>
 					</div>
 				</div>
 				<div class="form-group pb-10 flex">
 					<input type="checkbox" name="file" id="" placeholder="Drag files here or click to add files">
-					<span class="para1">
+					<span class="para1 pl-3">
 						I agree to Chuuse's <a href="#" class="text-primary"> Terms & Conditions</a>
 					</span>
 				</div>
 				<div class="form-group pb-10 flex">
 					<input type="checkbox" name="file" id="" placeholder="Drag files here or click to add files">
-					<p class="para1">I understand that Chuuse will process my information in accordance with their <a href="#" class="text-primary"> Privacy
-						Policy </a>. I may withdraw my consent
+					<p class="para1 pl-3">
+						I understand that Chuuse will process my information in accordance with their <a href="#" class="text-primary"> Privacy
+						Policy </a> . I may withdraw my consent
 					through unsubscribe links at any time.</p>
 				</div>
 				<div class="flex justify-center my-10 gap-x-5 md:gap-x-10">
 					<button class="btn-primary px-10 lg:px-32 py-4">
 						Submit
 					</button>
-					<div class="form-group flex self-center">
-						<p class="headline self-center">Already have an account setup?</p>
-						<nuxt-link to="/login" class="text-primary header7 pl-5">
-							Login &rightarrow;
-						</nuxt-link>
-					</div>
 				</div>
 			</form>
 		</div>

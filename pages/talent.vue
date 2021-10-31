@@ -1,16 +1,22 @@
 <template>
 	<div class="">
 		<section class="justify-between lg:pt-32 lg:pl-20 lg:px-0 px-8 bg-gray-dark text-white lg:flex pt-24">
-			<div class="self-center lg:w-6/12">
+			<div class="self-center lg:w-6/12 my-10">
 				<h1 class="header3">
 					Join a community of Software Engineers. Get hired by High paying companies
 				</h1>
 				<p class="headline pt-8">
 					Gain access to top software engineering talents in the industry.
 				</p>
-				<div class="py-10 md:flex">
-					<nuxt-link to="/getStarted" class="btn-primary md:mr-10 p-4 hover:text-white">
+				<div class="py-10 flex gap-x-5">
+					<nuxt-link to="/getStarted" class="btn-primary p-4 hover:text-white">
 						Get Started
+					</nuxt-link>
+					<p class="headline self-center">
+						OR
+					</p>
+					<nuxt-link to="/login" class="btn-primary md:mr-10 p-4 hover:text-white">
+						Login &rightarrow;
 					</nuxt-link>
 				</div>
 			</div>
@@ -95,12 +101,12 @@
 				</div>
 			</div>
 		</div>
-		<section class="faq bg-white">
+		<section class="faq bg-white text-gray-dark">
 			<div class="lg:pt16 pt-10 pb-20 lg:px-20 px-8">
 				<h1 class="header4 py-6 text-center">FAQ</h1>
 				<div class="">
 					<div class="collapsible-header flex py-3 justify-between" @click="toggleMenu">
-						<h1 class="header7 cursor-pointer">
+						<h1 class="label cursor-pointer">
 							Am I paying a subscription fee?
 						</h1>
 						<span class="cursor-pointer"><i class="uil uil-angle-down text-2xl"></i></span>
@@ -114,7 +120,7 @@
 				</div>
 				<div class="">
 					<div class="collapsible-header flex py-3 justify-between" @click="toggleLed">
-						<h1 class="header7 cursor-pointer">
+						<h1 class="label cursor-pointer">
 							Can an engineer decide to opt-out of the employment contract?
 						</h1>
 						<span class="cursor-pointer"><i class="uil uil-angle-down text-2xl"></i></span>
@@ -128,7 +134,7 @@
 				</div>
 				<div class="">
 					<div class="collapsible-header flex py-3 justify-between" @click="toggleCrash">
-						<h1 class="header7 cursor-pointer">
+						<h1 class="label cursor-pointer">
 							Can I terminate the employment with an engineer that has been promoted to full-time contract
 							staff and get a
 							replacement?
@@ -142,7 +148,7 @@
 				</div>
 				<div class="">
 					<div class="collapsible-header flex py-3 justify-between" @click="toggleAccelerate">
-						<h1 class="header7 cursor-pointer">
+						<h1 class="label cursor-pointer">
 							Can I terminate the employment of an engineer immediately after the internship & training
 							phase (not promote him/her to
 							full-time contract staff)?
@@ -157,7 +163,7 @@
 				</div>
 				<div class="">
 					<div class="collapsible-header flex py-3 justify-between" @click="togglePro">
-						<h1 class="header7 w-11/12 cursor-pointer">
+						<h1 class="label w-11/12 cursor-pointer">
 							On what grounds can an engineer opt-out of the 2-year contract?
 						</h1>
 						<span class="cursor-pointer"><i class="uil uil-angle-down text-2xl"></i></span>

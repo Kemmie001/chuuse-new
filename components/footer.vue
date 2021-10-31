@@ -28,10 +28,10 @@
           ">
 					<img src="../assets/img/footerLogo.png" alt="">
 					<span class="pt-8">
-						<a class="para2" href="mailto:info@chuuse.com">info@chuuse.com</a>
+						<a class="headline" href="mailto:info@chuuse.com">info@chuuse.com</a>
 					</span>
 					<span class="pt-4">
-						<a class="para2" href="tel:+2349040426882">(234) 904 0426 882</a>
+						<a class="headline" href="tel:+2349040426882">(234) 904 0426 882</a>
 					</span>
 					<span class="flex mt-10 items-center">
 						<a class="text-md text-gray-light justify-center lg:justify-start py-1 flex pr-5" href="#"
@@ -80,7 +80,7 @@
 					<h1 class="header7 mb-6">
 						Company
 					</h1>
-					<div class="flex flex-col para2">
+					<div class="flex flex-col headline">
 						<div class="flex flex-nowrap mb-6">
 							<div>
 								<nuxt-link to="/contact">Contact Us</nuxt-link>
@@ -120,7 +120,7 @@
 					<h1 class="header7 mb-6">
 						Information Links
 					</h1>
-					<div class="flex flex-col para2">
+					<div class="flex flex-col headline">
 						<div class="flex flex-nowrap mb-6">
 							<div>
 								<nuxt-link to="/career">Build your career in Tech</nuxt-link>
@@ -148,7 +148,7 @@
             lg:mt-0 lg:mr-5
           ">
 					<h1 class="header7 mb-6">Our office address</h1>
-					<div class="mx-5 lg:mx-0 para2 mb-10">
+					<div class="mx-5 lg:mx-0 headline mb-10">
 						<a class="" target="_blank" rel="noreferer" href="https://goo.gl/maps/uikWjS9DEvW3coQ69">
 							50 Ebittu Ukiwe street, Jabi, Abuja Nigeria
 						</a>
@@ -165,7 +165,7 @@
 				</div>
 			</div>
 			<div class="flex justify-center pt-5 mb-4">
-				<h1 class="caption3 text-gray-light">Chuuse Arts Limited © 2021</h1>
+				<h1 class="headline text-gray-light">Chuuse Arts Limited © 2021</h1>
 			</div>
 		</div>
 	</footer>

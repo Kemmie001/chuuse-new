@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <section class="bg-gray-light justify-between lg:pt-32 lg:px-20 px-8 banner lg:flex pt-24">
-      <div class="self-center lg:w-6/12">
+      <div class="self-center lg:w-6/12 my-10 md:my-0">
         <h1 class="header1">
           Ready to build a <span class="text-primary">Career</span> in <i class="underlined">Tech</i>?
         </h1>
@@ -165,7 +165,7 @@
     <section class="bg-gray-light text-center py-10 lg:px-20 px-8 banner">
       <h1 class="text-tertiary header6 py-5">Our Partnership</h1>
       <div class="lg:flex justify-center pb-10">
-        <div class="flex md:justify-between flex-wrap gap-y-10 gap-x-4">
+        <div class="grid grid-cols-2 md:flex md:justify-between md:flex-wrap gap-y-10 gap-x-4">
           <div class="mx-auto">
             <img src="../assets/img/bio1.png" alt="" class="">
           </div>

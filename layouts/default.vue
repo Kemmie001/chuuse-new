@@ -48,7 +48,7 @@
 				</nav>
 			</div>
 			<a href="" class="mobile-menu" @click.prevent="toggleMenu">
-				Bars
+			<i class="uil uil-bars text-primary text-2xl"></i>
 			</a>
 		</div>
 		<Nuxt />
@@ -57,7 +57,7 @@
 			<div :class="{ open: isOpen }" class="mobile-menu-new-holder" @click.self="toggleMenu">
 				<div class="mobile-menu-new">
 					<menu>
-						<a href="" class="text-dark closecon flex w-full justify-end pr-5" @click.prevent="toggleMenu">
+						<a href="" class="text-dark flex w-full text-lg justify-end pr-5" @click.prevent="toggleMenu">
 							X
 						</a>
 						<nav>
@@ -69,7 +69,7 @@
 							<nuxt-link to="/contact" class="focus:text-primary">Contact</nuxt-link>
 							<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech
 							</nuxt-link>
-							<nuxt-link to="/talent" class="btn-primary text-white hover:text-white w-10/12">
+							<nuxt-link to="/talent" class="btn-primary text-white hover:text-white w-7/12 m-5">
 								Join Talent Pool &rightarrow;
 							</nuxt-link>
 						</nav>
@@ -95,6 +95,11 @@
 				showDropDown: false,
 				tab: false,
 			};
+		},
+		watch: {
+			$route(to, from) {
+				this.toggleMenu();
+			},
 		},
 		methods: {
 			toggleMenu() {

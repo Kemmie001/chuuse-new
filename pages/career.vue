@@ -1,7 +1,7 @@
 <template>
 	<div class="">
 		<section class="justify-between lg:pt-32 lg:pl-20 lg:px-0 px-8 banner lg:flex pt-24">
-			<div class="self-center lg:w-5/12">
+			<div class="self-center lg:w-5/12 my-10">
 				<h1 class="header2">
 					Ready to build a <span class="text-primary">Career</span> in the Tech Space
 				</h1>
@@ -14,7 +14,7 @@
 					</nuxt-link>
 				</div>
 			</div>
-			<div class="hidden lg:flex lg:w-6/12">
+			<div class="hidden lg:flex lg:w-6/12 my-10">
 				<img class="hm-hero" src="../assets/img/career.png" alt />
 			</div>
 		</section>
@@ -169,7 +169,7 @@
 	}
 
 	.ready {
-		background: linear-gradient(rgba(24, 15, 18, 0.5), rgba(24, 15, 18, 0.5)), url('../assets/img/ready.png');
+		background: linear-gradient(rgba(24, 15, 18, 0.75), rgba(24, 15, 18, 0.75)), url('../assets/img/ready.png');
 		background-size: cover;
 		width: 100%;
 	}
