@@ -1,7 +1,83 @@
 <template>
-	<h1 class="">
-		Not Found
-	</h1>
+	<div class="layout">
+		<div id="main-header" :class="{ open: isOpen }" class="
+        w-full
+        fixed
+        top-0
+        left-0
+        justify-between
+        overflow-hidden
+		bg-gray-light
+        header
+        xl:px-20
+        px-8
+        py-10
+      ">
+			<div class="flex flex-nowrap items-center">
+				<nuxt-link class="flex flex-nowrap items-center" to="/">
+					<img class="lg:hidden flex logo-text" src="../assets/img/Logo.png" alt="" />
+				</nuxt-link>
+				<nuxt-link class="flex flex-nowrap items-center" to="/">
+					<img class="hidden lg:flex logo-text" src="../assets/img/Logo.png" alt="" />
+				</nuxt-link>
+				<nav class="
+				headline
+            nav
+            hidden
+            lg:flex
+            flex-col
+            lg:flex-row
+        	ml-16
+            flex-no-wrap
+            menu-links
+          ">
+					<nuxt-link to="/" class="focus:text-primary">Home</nuxt-link>
+					<nuxt-link to="/about" class="focus:text-primary">About</nuxt-link>
+					<nuxt-link class="focus:text-primary" to="/blog">Blog</nuxt-link>
+					<nuxt-link to="/contact" class="focus:text-primary">Contact</nuxt-link>
+				</nav>
+			</div>
+			<div class="hidden lg:flex flex-col lg:flex-row lg:items-center menu">
+				<nav class="flex flex-no-wrap xl:ml-30">
+					<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
+					<div class="py-10">
+						<nuxt-link to="/talent" class="btn-primary text-white hover:text-white">
+							Join Talent Pool &rightarrow;
+						</nuxt-link>
+					</div>
+				</nav>
+			</div>
+			<a href="" class="mobile-menu" @click.prevent="toggleMenu">
+			<i class="uil uil-bars text-primary text-2xl"></i>
+			</a>
+		</div>
+		<Nuxt />
+		<publicFooter />
+		<div class="flex lg:hidden flex-col items-center w-full slot-holder">
+			<div :class="{ open: isOpen }" class="mobile-menu-new-holder" @click.self="toggleMenu">
+				<div class="mobile-menu-new">
+					<menu>
+						<a href="" class="text-dark flex w-full text-lg justify-end pr-5" @click.prevent="toggleMenu">
+							X
+						</a>
+						<nav>
+							<nuxt-link class="flex flex-nowrap items-center" to="/">
+								<img class="logo" src="../assets/img/Logo.png" alt="" />
+							</nuxt-link>
+							<nuxt-link to="/about" class="pr-4 focus:text-primary">About</nuxt-link>
+							<nuxt-link class="pr-4 focus:text-primary" to="/blog">Blog</nuxt-link>
+							<nuxt-link to="/contact" class="focus:text-primary">Contact</nuxt-link>
+							<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech
+							</nuxt-link>
+							<nuxt-link to="/talent" class="btn-primary text-white hover:text-white w-7/12 m-5">
+								Join Talent Pool &rightarrow;
+							</nuxt-link>
+						</nav>
+					</menu>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
