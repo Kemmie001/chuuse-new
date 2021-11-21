@@ -27,83 +27,97 @@
 			your career, and
 			connecting with other talented engineers in our community. Cheers to that 🥂!</h2>
 		<div class="pb-10 my-8">
-			<form action="" class="">
+			<form class="" @submit="registerUser">
 				<div class="">
 					<div class="grid md:grid-cols-2 md:justify-between gap-x-20">
 						<div class="form-group pb-10">
 							<label for="firstname">First Name: *</label>
-							<input type="text" required class=" rounded-lg" name="firstname" placeholder="Your first name"
-								id="">
+							<input id="" v-model="firstName" type="text" required class=" rounded-lg" name="firstname"
+								placeholder="Your first name">
 						</div>
 						<div class="form-group pb-10">
 							<label for="lastname">Last Name: *</label>
-							<input type="text" required class=" rounded-lg" name="lastname" placeholder="Your last name" id="">
+							<input id="" v-model="lastName" type="text" required class=" rounded-lg" name="lastname" placeholder="Your last name">
 						</div>
 						<div class="form-group pb-10">
 							<label for="email">Email Address: *</label>
-							<input type="email" required class=" rounded-lg" name="email"
-								placeholder="Your email address" id="">
+							<input id="" v-model="email" type="email" required class=" rounded-lg"
+								name="email" placeholder="Your email address">
+						</div>
+						<div class="form-group pb-10">
+							<label for="password">Password: *</label>
+							<input id="" v-model="password" type="password" required class=" rounded-lg"
+								name="password" placeholder="Password">
 						</div>
 						<div class="form-group pb-10">
 							<label for="Nationality">Nationality: *</label>
-							<input type="text" required class=" rounded-lg" name="Nationality" placeholder="Your Nationality" id="">
+							<select v-model="nationality">
+								<option value="" disabled selected>Select Your Country</option>
+								<option v-for="country in countries" :key="country.index" :value="country.value">
+								{{ country.label }}
+								</option>
+							</select>
 						</div>
 						<div class="form-group pb-10">
 							<label for="experience">Years of Working Experience: *</label>
-							<Select>
-								<option value="be">1 year</option>
-								<option value="node">2 years</option>
-								<option value="java">3 - 4 years</option>
-								<option value="Python">5 - more years</option>>
-							</Select>
+							<select v-model="yearsOfWorkingExperience">
+								<option value="" disabled selected>Select an option</option>
+								<option value="1">1 year</option>
+								<option value="2">2 years</option>
+								<option value="3-4">3 - 4 years</option>
+								<option value="5-more">5 - more years</option>>
+							</select>
 						</div>
 						<div class="form-group pb-10">
 							<label for="years">Years of Experience With Primary Stack: *</label>
-							<Select>
-								<option value="be">1 year</option>
-								<option value="node">2 years</option>
-								<option value="java">3 - 4 years</option>
-								<option value="Python">5 - more years</option>>
-							</Select>
+							<select v-model="yearsOfExperienceWithPrimaryStack">
+								<option value="" disabled selected>Select an option</option>
+								<option value="1">1 year</option>
+								<option value="2">2 years</option>
+								<option value="3-4">3 - 4 years</option>
+								<option value="5-more">5 - more years</option>>
+							</select>
 						</div>
 						<div class="form-group pb-10">
 							<label for="stack">Primary Stack: *</label>
-							<Select placeholder="Select an option">
-								<option value="web">Web development</option>
-								<option value="Mobile">Mobile App. development</option>
-								<option value="ui">UI/UX</option>
-								<option value="data">Data Science</option>
-								<option value="cloud">Cloud Computing</option>
-								<option value="ml">Machine Learning</option>
-							</Select>
+							<select v-model="primaryStack">
+								<option value="" disabled selected>Select an option</option>
+								<option value="Web development">Web development</option>
+								<option value="Mobile App">Mobile App. development</option>
+								<option value="UI/UX">UI/UX</option>
+								<option value="Data Science">Data Science</option>
+								<option value="Cloud Computing">Cloud Computing</option>
+								<option value="Machine Learning">Machine Learning</option>
+							</select>
 						</div>
 						<div class="form-group pb-10">
 							<label for="language">English Proficiency: *</label>
-							<Select placeholder="Select an option">
-								<option value="ssce">Beginner</option>
-								<option value="tet">Intermediate</option>
-								<option value="masters">Advanced</option>
-								<option value="phd">Native</option>
-							</Select>
+							<select v-model="englishProficiency">
+								<option value="" disabled selected>Select an option</option>
+								<option value="Beginner">Beginner</option>
+								<option value="Intermediate">Intermediate</option>
+								<option value="Advanced">Advanced</option>
+								<option value="Native">Native</option>
+							</select>
 						</div>
 						<div class="form-group pb-10">
-							<label for="phone">Years of Working Experience: *</label>
-							<input type="url" placeholder="Your portfolio link" required name="" id="">
+							<label for="phone">Your Portfolio Link: *</label>
+							<input id="" v-model="portfolioLink" type="url" placeholder="Your Portfolio Link" required name="">
 						</div>
 						<div class="form-group pb-10">
 							<label for="Resume">Resume: *</label>
-							<input type="file" name="Resume" id="" placeholder="Drag files here or click to add files">
+							<input id="" v-model="resumeFileUrl" type="url" name="Resume" placeholder="Upload Resume Link">
 						</div>
 					</div>
 				</div>
 				<div class="form-group pb-10 flex">
-					<input type="checkbox" name="file" id="" placeholder="Drag files here or click to add files">
+					<input id="" type="checkbox" name="file" placeholder="Drag files here or click to add files">
 					<span class="para1 pl-3">
 						I agree to Chuuse's <a href="#" class="text-primary"> Terms & Conditions</a>
 					</span>
 				</div>
 				<div class="form-group pb-10 flex">
-					<input type="checkbox" name="file" id="" placeholder="Drag files here or click to add files">
+					<input id="" type="checkbox" name="file" placeholder="Drag files here or click to add files">
 					<p class="para1 pl-3">
 						I understand that Chuuse will process my information in accordance with their <a href="#" class="text-primary"> Privacy
 						Policy </a> . I may withdraw my consent
@@ -119,7 +133,61 @@
 	</section>
 </template>
 <script>
-
+import axios from 'axios'
+const countries = require('i18n-iso-countries')
+countries.registerLocale(require('i18n-iso-countries/langs/en.json'))
+export default{
+	data(){
+		return{
+			nationality: '',
+			portfolioLink: '',
+			firstName: '',
+			lastName: '',
+			email: '',
+			englishProficiency: '',
+			yearsOfWorkingExperience: '',
+			yearsOfExperienceWithPrimaryStack: '',
+			resumeFileUrl: '',
+			password: '',
+			primaryStack: '',
+		}
+	},
+	computed: {
+    countries () {
+      const list = countries.getNames('en', { select: 'official' })
+      return Object.keys(list).map((key) => ({ value: key, label: list[key] }))
+    }
+  },
+  methods: {
+	  async registerUser(){
+			await axios.post('https://chuuse-api.herokuapp.com/api/v1/user/register',
+			{
+				nationality: this.nationality,
+				portfolioLink: this.portfolioLink,
+				firstName: this.firstName,
+				lastName: this.lastName,
+				email: this.email,
+				englishProficiency: this.englishProficiency,
+				yearsOfWorkingExperience: this.yearsOfWorkingExperience,
+				yearsOfExperienceWithPrimaryStack: this.yearsOfExperienceWithPrimaryStack,
+				resumeFileUrl: this.resumeFileUrl,
+				password: this.password,
+				primaryStack: this.primaryStack,
+			})
+			this.firstName = ''
+			this.lastName =''
+			this.email = ''
+			this.password = ''
+			this.englishProficiency = ''
+			this.yearsOfWorkingExperience = ''
+			this.yearsOfExperienceWithPrimaryStack = ''
+			this.resumeFileUrl = ''
+			this.primaryStack= ''
+			this.nationality = ''
+			this.portfolioLink = ''
+		}
+  }
+}
 </script>
 <style lang="scss" scoped>
 	@import "./assets/scss/mixin.scss";
@@ -129,6 +197,7 @@
 	input[type="file"],
 	input[type="email"],
 	input[type="url"],
+	input[type="password"],
 	textarea,
 	select {
 		background: none;
