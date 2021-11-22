@@ -1,8 +1,8 @@
 <template>
-	<section class="bg-gray-light pt-24 lg:py-20 lg:px-20 px-8">
+	<section class="pt-24 lg:py-20 lg:px-20 px-8">
 		<section class="justify-between banner lg:flex py-10">
-			<div class="hidden lg:flex lg:w-6/12">
-				<img class="hm-hero" src="../assets/img/hero2.png" alt />
+			<div class="w-full flex lg:w-6/12 md:pb-0 pb-5">
+				<img class="hm-hero" src="../assets/img/about.gif" alt />
 			</div>
 			<div class="self-center lg:w-5/12 text-neutral">
 				<h1 class="header2">
@@ -36,7 +36,10 @@
 				<p class="header6">Participating Companies</p>
 			</div>
 		</div>
-		<article class="justify-between lg:flex pt-10 pb-20">
+		<article class="justify-between lg:flex lg:flex-row-reverse pt-10 pb-10">
+			<div class="w-full flex lg:w-4/12 pb-10">
+				<img class="hm-hero" src="../assets/img/what.png" alt />
+			</div>
 			<div class="self-center lg:w-6/12">
 				<h1 class="header3 text-primary">
 					What is Chuuse About ?
@@ -59,9 +62,6 @@
 					connect talents. We
 					are a leading tech talent development company for emerging economies.
 				</p>
-			</div>
-			<div class="hidden lg:flex lg:w-4/12">
-				<img class="hm-hero" src="../assets/img/what.png" alt />
 			</div>
 		</article>
 	</section>

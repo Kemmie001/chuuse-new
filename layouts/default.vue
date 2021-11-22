@@ -7,7 +7,7 @@
         left-0
         justify-between
         overflow-hidden
-		bg-gray-light
+		bg-white
         header
         xl:px-20
         px-8
@@ -42,7 +42,7 @@
 					<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech</nuxt-link>
 					<div class="py-10">
 						<nuxt-link to="/talent" class="btn-primary text-white hover:text-white">
-							Join Talent Pool &rightarrow;
+							Join Talent Pool
 						</nuxt-link>
 					</div>
 				</nav>
@@ -70,7 +70,7 @@
 							<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech
 							</nuxt-link>
 							<nuxt-link to="/talent" class="btn-primary text-white hover:text-white w-7/12 m-5">
-								Join Talent Pool &rightarrow;
+								Join Talent Pool
 							</nuxt-link>
 						</nav>
 					</menu>
@@ -92,8 +92,6 @@
 		data() {
 			return {
 				isOpen: false,
-				showDropDown: false,
-				tab: false,
 			};
 		},
 		watch: {
@@ -104,15 +102,6 @@
 		methods: {
 			toggleMenu() {
 				this.isOpen = !this.isOpen;
-			},
-			closeMenu() {
-				this.showDropDown = false;
-			},
-			toggleShowDropDown() {
-				this.showDropDown = !this.showDropDown;
-			},
-			showTab(tab) {
-				this.tab = !this.tab;
 			},
 		},
 	};

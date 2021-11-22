@@ -4,7 +4,7 @@
 			<h1 class="header3 py-4">Get In Touch!</h1>
 			<p class="headline">Fill out the form and our Team will get back to you within 24 hours</p>
 		</div>
-		<div class="rounded-3xl bg-primary text-white p-4 md:px-10 shadow md:py-10 my-8">
+		<div class="rounded-xl bg-primary text-white p-4 md:px-10 shadow md:py-10 my-8">
 			<form action="" class="" @submit.prevent="postContact">
 				<div class="md:flex md:justify-between gap-x-20">
 					<div class="md:w-5/12">

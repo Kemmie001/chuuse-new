@@ -19,7 +19,7 @@
 			</div>
 		</section>
 		<article class="justify-between lg:flex lg:pt-16 pt-5 pb-20 lg:px-20 px-8">
-			<div class="hidden lg:flex lg:w-5/12">
+			<div class="w-full mx-auto md:mx-0 pb-10 lg::pb-0 flex lg:w-5/12">
 				<img class="hm-hero" src="../assets/img/about.png" alt />
 			</div>
 			<div class="self-center lg:w-6/12">
