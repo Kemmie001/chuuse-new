@@ -1,37 +1,37 @@
 <template>
 	<div class="">
-		<section class="justify-between lg:pt-32 lg:pl-20 lg:px-0 px-8 bg-gray-dark text-white lg:flex pt-24">
-			<div class="self-center lg:w-6/12 my-10">
+		<section class="justify-between h-screen lg:pt-32 lg:pl-20 lg:px-0 px-8 bg-gray-dark text-white lg:flex pt-24">
+			<div class="self-center lg:w-5/12 my-10">
 				<h1 class="header3">
 					Join a community of Software Engineers. Get hired by High paying companies
 				</h1>
-				<p class="headline pt-8">
+				<p class="headline py-8">
 					Gain access to top software engineering talents in the industry.
 				</p>
 				<div class="py-10 flex gap-x-5">
-					<nuxt-link to="/getStarted" class="btn-primary p-4 hover:text-white">
+					<nuxt-link to="/getStarted" class="btn-primary px-10 self-center py-4 hover:text-white">
 						Get Started
 					</nuxt-link>
-					<p class="headline self-center">
-						OR
-					</p>
-					<nuxt-link to="/login" class="btn-primary md:mr-10 p-4 hover:text-white">
-						Login &rightarrow;
+					<nuxt-link to="/login" class="border-2 border-primary rounded-md md:mr-10 px-10 self-center py-3 hover:text-white">
+						Login
 					</nuxt-link>
 				</div>
 			</div>
-			<div class="hidden lg:flex justify-end lg:w-6/12 -mb-10">
+			<div class="hidden lg:flex justify-end lg:w-7/12 -mb-20">
 				<img class="hm-hero w-5/6" src="../assets/img/talent.png" alt />
 			</div>
 		</section>
-		<article class="lg:pt-24 pt-16 pb-20 lg:px-20 px-8">
+		<article class="lg:pt-24 pt-8 lg:pt-16 pb-20 lg:px-20 px-8">
 			<div class="w-full text-center">
 				<h3 class="header4 mx-auto md:w-3/4 py-5">
 					Why you should join our community of the Chuuse’s Fellowship Programme
 				</h3>
 			</div>
 			<div class="pt-5 md:flex md:gap-x-10 md:justify-between w-full">
-				<div class="shadow-md rounded-xl p-3 mb-5 md:mb-0">
+				<div class="shadow-lg rounded-xl p-3 mb-10 md:mb-0">
+					<!-- <div class="w-24 h-24">
+						<img src="/fast.png" alt="">
+					</div> -->
 					<h6 class="header7 py-3">
 						Fast-Tracked Hiring Process
 					</h6>
@@ -39,7 +39,10 @@
 						Save time and money we’ll match you with vetted companies in no time.
 					</p>
 				</div>
-				<div class="shadow-md rounded-xl p-3 mb-5 md:mb-0">
+				<div class="shadow-lg rounded-xl p-3 mb-10 md:mb-0">
+					<!-- <div class="w-24 h-24">
+						<img src="/engine.png" alt="">
+					</div> -->
 					<h6 class="header7 py-3">
 						Premium Engineering Talent
 					</h6>
@@ -47,7 +50,10 @@
 						Become a premium talent by undergoing series of assessments, intensive training and drills .
 					</p>
 				</div>
-				<div class="shadow-md rounded-xl p-3">
+				<div class="shadow-lg rounded-xl p-3 mb-10 md:mb-0">
+					<!-- <div class="w-24 h-24">
+						<img src="/users.svg" alt="">
+					</div> -->
 					<h6 class="header7 py-3">
 						Career Coaching & Guidance
 					</h6>
@@ -58,7 +64,7 @@
 			</div>
 		</article>
 		<section class="bg-gray-light lg:justify-between lg:flex py-5 pt-16 mb-16 lg:px-20 px-8">
-			<div class="hidden lg:flex lg:w-5/12">
+			<div class="w-full mx-auto md:mx-0 pb-10 lg:pb-0flex lg:w-5/12">
 				<img class="hm-hero" src="../assets/img/talentw.png" alt />
 			</div>
 			<div class="self-center lg:w-6/12">

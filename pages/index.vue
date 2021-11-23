@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <section class="bg-gray-light justify-between lg:pt-32 lg:px-20 px-8 banner lg:flex pt-24">
+    <section class="justify-between lg:pt-32 lg:px-20 px-8 banner lg:flex pt-24">
       <div class="self-center lg:w-6/12 my-10 md:my-0">
         <h1 class="header1">
           Ready to build a <span class="text-primary">Career</span> in <i class="underlined">Tech</i>?
@@ -12,53 +12,53 @@
         </p>
         <div class="py-10 md:flex">
           <nuxt-link to="/getStarted" class="btn-primary md:mr-10 p-4 hover:text-white">
-            Get Started &rightarrow;
+            Get Started
           </nuxt-link>
           <div class="flex pt-10 md:pt-0">
             <a href="#" class="flex justify-center self-center shadow-md rounded-full h-12 w-12 bg-white">
               <img class="w-3 mx-auto" src="../assets/img/play.svg" alt="">
             </a>
-            <a href="#" class="pl-4 text-primary self-center cursor-pointer bold-button">Learn More on our Talent
-              Pool</a>
+            <nuxt-link to="talent" class="pl-4 text-primary self-center cursor-pointer bold-button">Learn More on our Talent
+              Pool</nuxt-link>
           </div>
         </div>
       </div>
-      <div class="hidden lg:flex lg:w-6/12">
+      <div class="lg:flex hidden lg:w-6/12 w-full">
         <img class="hm-hero" src="../assets/img/hero.png" alt />
       </div>
     </section>
     <section class="bg-gray-medDark lg:px-20 px-8 py-8">
       <div class="md:flex gap-x-10">
         <h2 class="header7 self-center text-primary">Experience with:</h2>
-        <carousel :paginationEnabled="false" :loop="true" :perPageCustom=" [[320, 4], [1080, 4]]"
-          class="flex w-full lg:justify-center self-center gap-x-10 mt-10 md:mt-0 md:w-10/12" :autoplay="true"
-          :navigate-to="someLocalProperty" :mouse-drag="false">
-          <slide>
-            <div class="">
+        <carousel :pagination-enabled="false" :loop="true" :per-page-custom=" [[120, 4], [1080, 4]]"
+          class="flex w-full lg:justify-center self-center gap-x-10 mt-5 md:mt-0 md:w-10/12" :autoplay="true"
+           :mouse-drag="false">
+          <slide class="self-center">
+            <div>
               <img src="../assets/img/partner1.png" alt="" class="w-20 md:w-32">
             </div>
           </slide>
-          <slide>
+          <slide class="self-center">
             <div class="">
               <img src="../assets/img/partner6.png" alt="" class="w-14 md:w-20 md:h-20">
             </div>
           </slide>
-          <slide>
+          <slide class="self-center">
             <div class="">
               <img src="../assets/img/partner5.png" alt="" class="w-20 md:w-32 ">
             </div>
           </slide>
-          <slide>
+          <slide class="self-center">
             <div class="">
               <img src="../assets/img/partner4.png" alt="" class="w-20 md:w-32 ">
             </div>
           </slide>
-          <slide>
+          <slide class="self-center">
             <div class="">
               <img src="../assets/img/partner3.png" alt="" class="w-20 md:w-32 ">
             </div>
           </slide>
-          <slide>
+          <slide class="self-center">
             <div class="">
               <img src="../assets/img/partner2.png" alt="" class="w-20 md:w-32">
             </div>
@@ -66,8 +66,8 @@
         </carousel>
       </div>
     </section>
-    <section class="bg-gray-light justify-between py-20 lg:px-20 px-8 lg:flex">
-      <div class="hidden lg:flex lg:w-4/12">
+    <section class="justify-between py-20 lg:px-20 px-8 lg:flex">
+      <div class="w-3/4 mx-auto md:mx-0 pb-10 lg:pb-0 flex lg:w-4/12">
         <img class="hm-hero" src="../assets/img/why.png" alt />
       </div>
       <div class="lg:w-7/12 lg:self-center">
@@ -183,16 +183,17 @@
       <h1 class="text-primary header3 py-5">Testimonies</h1>
       <div class="lg:mx-28 mb-20">
         <ClientOnly>
-          <carousel class="flex justify-center w-full" :paginationEnabled="false" :per-page-custom="[
+          <carousel class="flex justify-center w-full" :pagination-enabled="false" :per-page-custom="[
             [320, 1],
             [1020, 1],
-          ]" :mouse-drag="true">
+          ]">
             <slide v-for="testimonial in testimonials" :key="testimonial.id" class="slide-content">
-              <div class="flex flex-nowrap mt-5 items-center">
+              <div class="flex flex-nowrap mt-16 lg:mt-5 items-center">
                 <div class="md:z-10">
-                  <img class="hidden md:flex lg:w-full" :src="testimonial.image" :alt="testimonial.name" />
+                  <img class="hidden md:flex lg:w-full rounded-lg" :src="testimonial.image" :alt="testimonial.name" />
                 </div>
-                <span class="md:-ml-5 px-10 py-10 bg-white shadow-md rounded-xl">
+                <span class="md:-ml-5 px-10 lg:py-10 bg-white shadow-md rounded-xl">
+                  <img class="md:hidden flex w-28 h-28 mx-auto -mt-10 mb-10 rounded-full lg:w-full rounded-lg" :src="testimonial.image" :alt="testimonial.name" />
                   <p class="pb-16 text-left para1">{{ testimonial.message }}</p>
                   <span class="flex pb-5">
                     <p class="font-bold text-primary">
@@ -239,18 +240,18 @@
             image: 'test1.png',
           },
           {
-            name: 'Fiona Barnes',
+            name: 'James Stone',
             message:
               'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
             program: 'Talent Incubation',
-            image: 'test1.png',
+            image: 'test2.jpg',
           },
           {
-            name: 'Fiona Barnes',
+            name: 'AdeDapo Isaiah',
             message:
               'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
             program: 'Talent Incubation',
-            image: 'test1.png',
+            image: 'test3.jpg',
           },
         ],
       }
