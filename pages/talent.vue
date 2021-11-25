@@ -12,7 +12,7 @@
 					<nuxt-link to="/getStarted" class="btn-primary px-10 self-center py-4 hover:text-white">
 						Get Started
 					</nuxt-link>
-					<nuxt-link to="/login" class="border-2 border-primary rounded-md md:mr-10 px-10 self-center py-3 hover:text-white">
+					<nuxt-link to="/login" class="border-2 border-primary rounded-md md:ml-10 px-10 self-center py-3 hover:text-white">
 						Login
 					</nuxt-link>
 				</div>
