@@ -23,14 +23,14 @@
 	import blogNav from "../components/blogNav";
 	import blogText from "../components/blogText";
 	export default {
-		data() {
-			return {}
-		},
-		methods: {},
 		components: {
 			blogNav,
 			blogText
-		}
+		},
+		data() {
+			return {}
+		},
+		methods: {}
 	}
 </script>
 <style lang="scss">
