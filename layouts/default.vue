@@ -33,7 +33,7 @@
           ">
 					<nuxt-link to="/" class="focus:text-primary">Home</nuxt-link>
 					<nuxt-link to="/about" class="focus:text-primary">About</nuxt-link>
-					<nuxt-link class="focus:text-primary" to="/blog">Blog</nuxt-link>
+					<!-- <nuxt-link class="focus:text-primary" to="/blog">Blog</nuxt-link> -->
 					<nuxt-link to="/contact" class="focus:text-primary">Contact</nuxt-link>
 				</nav>
 			</div>
@@ -65,11 +65,11 @@
 								<img class="logo" src="../assets/img/Logo.png" alt="" />
 							</nuxt-link>
 							<nuxt-link to="/about" class="pr-4 focus:text-primary">About</nuxt-link>
-							<nuxt-link class="pr-4 focus:text-primary" to="/blog">Blog</nuxt-link>
+							<!-- <nuxt-link class="pr-4 focus:text-primary" to="/blog">Blog</nuxt-link> -->
 							<nuxt-link to="/contact" class="focus:text-primary">Contact</nuxt-link>
 							<nuxt-link to="/career" class="focus:text-primary bold-button">Build your career in Tech
 							</nuxt-link>
-							<nuxt-link to="/talent" class="btn-primary text-white hover:text-white w-7/12 m-5">
+							<nuxt-link to="/talent" class="btn-primary text-white hover:text-white lg:w-7/12 m-5">
 								Join Talent Pool
 							</nuxt-link>
 						</nav>
