@@ -51,7 +51,7 @@ export default {
 	},
 	methods: {
 		async postContact(){
-			await axios.post('https://chuuse-api.herokuapp.com/api/v1/contact-form',
+			await axios.post('https://localhost/api/v1/contact-form',
 			{
 				fullName: this.contact.name,
 				email: this.contact.email,

@@ -1,34 +1,20 @@
 <template>
 	<section class="bg-gray-light pt-32 lg:py-20 lg:px-20 px-8">
-		<section class="justify-between banner lg:flex py-10">
-			<div class="self-center lg:w-5/12 text-neutral">
-				<h1 class="header2">
-					Work With The World’s
-					Leading Companies
-				</h1>
-				<p class="para1 pt-8">
-					By applying to join our Talent pool, you are getting closer to getting your next role, advancing your career, and
-					connecting with other talented engineers in our community. Cheers to that 🥂!
-				</p>
-				<div class="pt-5">
-					<p class="para1">Here's what you should expect after you submit this form:</p>
-					<ul class="list-disc para1 pl-5 pt-5">
-						<li class="pb-3">A short assessment to test your fluency in English (15 mins)</li>
-						<li class="pb-3">A HackerRank coding challenge (1 hour)</li>
-						<li class="pb-3">A live technical interview with a senior developer (1 hour)</li>
-					</ul>
-				</div>
-			</div>
-			<div class="hidden lg:flex lg:w-6/12">
-				<img class="hm-hero" src="../assets/img/hero2.png" alt />
-			</div>
-		</section>
-		<h2 class="header7 mt-10">By applying to join our Talent pool, you are getting closer to getting your next role, advancing
-			your career, and
-			connecting with other talented engineers in our community. Cheers to that 🥂!</h2>
 		<div class="pb-10 my-8">
-			<form class="" @submit="registerUser">
+			<form class="" @submit="editProfile">
 				<div class="">
+					<div class="form-group mb-5">
+							<label class="file-holder relative flex justify-center items-center cursor-pointer" for="poster">
+							<div class="flex justify-center items-center flex-col">
+								<span v-if="!pict" class="absolute flex flex-col justify-center items-center">
+								<p>Select Profile Photo</p>
+								<i class="uil uil-camera-plus text-4xl"></i>
+								</span>
+								<img v-if="pict" id="iimm" class="poster" :src="pict" alt="">
+							</div>
+							<input id="poster" name="image" type="file" @change="selectImage">
+							</label>
+						</div>
 					<div class="grid md:grid-cols-2 md:justify-between gap-x-20">
 						<div class="form-group pb-10">
 							<label for="firstname">First Name: *</label>
@@ -45,9 +31,9 @@
 								name="email" placeholder="Your email address">
 						</div>
 						<div class="form-group pb-10">
-							<label for="password">Password: *</label>
-							<input id="" v-model="password" type="password" required class=" rounded-lg"
-								name="password" placeholder="Password">
+							<label for="phone">Phone Number: *</label>
+							<input id="" v-model="phone" type="phone" required class="rounded-lg"
+								name="phone" placeholder="Phone Number">
 						</div>
 						<div class="form-group pb-10">
 							<label for="Nationality">Nationality: *</label>
@@ -57,6 +43,11 @@
 								{{ country.label }}
 								</option>
 							</select>
+						</div>
+						<div class="form-group pb-10">
+							<label for="location">Locationion: *</label>
+							<input id="" v-model="location" type="text" required class=" rounded-lg"
+								name="location" placeholder="Location">
 						</div>
 						<div class="form-group pb-10">
 							<label for="experience">Years of Working Experience: *</label>
@@ -125,7 +116,7 @@
 				</div>
 				<div class="flex justify-center my-10 gap-x-5 md:gap-x-10">
 					<button class="btn-primary px-10 lg:px-32 py-4">
-						Submit
+						Update Profile
 					</button>
 				</div>
 			</form>
@@ -137,8 +128,10 @@ import axios from 'axios'
 const countries = require('i18n-iso-countries')
 countries.registerLocale(require('i18n-iso-countries/langs/en.json'))
 export default{
+	layout: "empty",
 	data(){
 		return{
+			pict: null,
 			nationality: '',
 			portfolioLink: '',
 			firstName: '',
@@ -159,8 +152,21 @@ export default{
     }
   },
   methods: {
-	  async registerUser(){
-			await axios.post('https://localhost/api/v1/user/register',
+	selectImage(x) {
+      const vm = this;
+      const input = x.target.files;
+      // eslint-disable-next-line prefer-destructuring
+      this.profileImage = input[0];
+      if (input && input[0]) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          vm.pict = e.target.result;
+        };
+        reader.readAsDataURL(input[0]);
+      }
+    },
+	  async editProfile(){
+			await axios.put('https://localhost/api/v1/user/register',
 			{
 				nationality: this.nationality,
 				portfolioLink: this.portfolioLink,
@@ -192,9 +198,28 @@ export default{
 <style lang="scss" scoped>
 	@import "./assets/scss/mixin.scss";
 
+	  .file-holder {
+		display: flex;
+		@apply bg-gray-medium;
+		border: 1px solid #c4c4c4;
+		color: #ffffff;
+		border-radius: 50%;
+		width: 170px;
+		height: 170px;
+		img.poster {
+		border-radius: 50%;
+		width: 170px;
+		height: 170px;
+		overflow: hidden;
+		object-fit: cover;
+		}
+	}
+	input[type="file"] {
+		display: none;
+	}
+
 	input[type="text"],
 	input[type="number"],
-	input[type="file"],
 	input[type="email"],
 	input[type="url"],
 	input[type="password"],
