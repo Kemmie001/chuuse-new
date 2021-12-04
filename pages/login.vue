@@ -6,11 +6,11 @@
 		<form action="" class="pt-5">
 			<div class="form-group pb-10">
 				<label for="email">Email address</label>
-				<input type="email" name="email" placeholder="Enter your email address" id="">
+				<input id="" type="email" name="email" placeholder="Enter your email address">
 			</div>
 			<div class="form-group pb-10">
 				<label for="Password">Password</label>
-				<input type="password" name="password" placeholder="Enter your password" id="">
+				<input id="" type="password" name="password" placeholder="Enter your password">
 			</div>
 			<button class="btn-primary w-full py-4">
 				Submit
@@ -24,7 +24,7 @@
 		</form>
 		</div>
 			<div class="hidden lg:flex lg:justify-end login-side pt-32">
-				<nuxt-link to="/getStarted" class="btn-secondary pt-4 h-12 md:mr-10 px-10 hover:text-white">
+				<nuxt-link to="/getStarted" class="btn-secondary pt-4 h-12 md:mr-10 px-10">
 					Get Started &rightarrow;
 				</nuxt-link>
 			</div>

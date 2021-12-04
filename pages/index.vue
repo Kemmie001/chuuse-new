@@ -239,20 +239,6 @@
             program: 'Talent Incubation',
             image: 'test1.png',
           },
-          {
-            name: 'James Stone',
-            message:
-              'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
-            program: 'Talent Incubation',
-            image: 'test2.jpg',
-          },
-          {
-            name: 'AdeDapo Isaiah',
-            message:
-              'So far it’s been good, It helped me learn Java with the latest features, exposed me to new opportunities in app development',
-            program: 'Talent Incubation',
-            image: 'test3.jpg',
-          },
         ],
       }
     },
