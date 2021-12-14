@@ -2,15 +2,14 @@
 	<footer class="
       flex flex-col
       lg:flex-row
-      items-center
       lg:items-start
       overflow-hidden
       w-full
 	  bg-gray-medDark
     ">
-		<div class="flex flex-col w-full lg:px-20 px-5 text-white divide-solid divide-gray-medium divide-y-2">
+		<div class="md:flex flex-col w-full lg:px-20 px-10 text-white divide-solid divide-gray-medium divide-y-2">
 			<div class="
-          flex
+          md:flex
           w-full
           justify-between
           flex-col
@@ -20,19 +19,19 @@
           py-10
         ">
 				<div class="
-            flex flex-col
+            md:flex flex-col
             items-center
             lg:items-start
             mt-5
             lg:mt-0 lg:w-3/12 lg:mr-20
           ">
 					<img src="../assets/img/footerLogo.png" alt="">
-					<span class="pt-8">
-						<a class="headline" href="mailto:info@chuuse.com">info@chuuse.com</a>
-					</span>
-					<span class="pt-4">
+					<div class="pt-8">
+						<a class="headline" href="mailto:contact@chuuse.org">contact@chuuse.org</a>
+					</div>
+					<div class="mt-4">
 						<a class="headline" href="tel:+2349040426882">(234) 904 0426 882</a>
-					</span>
+					</div>
 					<span class="flex mt-10 items-center">
 						<a class="text-md text-gray-light justify-center lg:justify-start py-1 flex pr-5" href="#"
 							target="_blank">
@@ -70,13 +69,13 @@
 					</span>
 				</div>
 				<div class="
-            flex
-            lg:w-3/12
-            flex-col
-            lg:items-start
-            mt-10
-            lg:mt-0 lg:mr-5
-          ">
+				flex
+				lg:w-3/12
+				flex-col
+				lg:items-start
+				mt-10
+				lg:mt-0 lg:mr-5
+			">
 					<h1 class="header7 mb-6">
 						Company
 					</h1>
@@ -139,7 +138,7 @@
 					</div>
 				</div>
 				<div class="
-            flex
+            md:flex
             lg:w-3/12
             flex-col
 			items-center
@@ -148,7 +147,7 @@
             lg:mt-0 lg:mr-5
           ">
 					<h1 class="header7 mb-6">Our office address</h1>
-					<div class="mx-5 lg:mx-0 headline mb-10">
+					<div class="lg:mx-0 headline mb-10">
 						<a class="" target="_blank" rel="noreferer" href="https://goo.gl/maps/uikWjS9DEvW3coQ69">
 							50 Ebittu Ukiwe street, Jabi, Abuja Nigeria
 						</a>
@@ -158,7 +157,7 @@
 						<input class="focus:outline-none block md:inline p-3
 						rounded-lg ml-1 md:ml-4 para1 bg-gray-light text-gray-medDark" type="email" name=""
 							placeholder="Your email address">
-						<button class="text-white p-3 m-2 bg-gray-dark rounded-lg focus:outline-none">
+						<button class="text-white p-3 my-2 bg-gray-dark rounded-lg focus:outline-none">
 							<a href="" class="flex md:hidden">Subscribe</a>
 							<a href="" class="hidden md:flex">GO</a></button>
 					</div>

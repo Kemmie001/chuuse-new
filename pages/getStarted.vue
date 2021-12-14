@@ -27,7 +27,7 @@
 			your career, and
 			connecting with other talented engineers in our community. Cheers to that 🥂!</h2>
 		<div class="pb-10 my-8">
-			<form class="" @submit="registerUser">
+			<form class="" @submit.prevent="registerUser">
 				<div class="">
 					<div class="grid md:grid-cols-2 md:justify-between gap-x-20">
 						<div class="form-group pb-10">
@@ -43,11 +43,6 @@
 							<label for="email">Email Address: *</label>
 							<input id="" v-model="email" type="email" required class=" rounded-lg"
 								name="email" placeholder="Your email address">
-						</div>
-						<div class="form-group pb-10">
-							<label for="password">Password: *</label>
-							<input id="" v-model="password" type="password" required class=" rounded-lg"
-								name="password" placeholder="Password">
 						</div>
 						<div class="form-group pb-10">
 							<label for="Nationality">Nationality: *</label>
@@ -133,7 +128,8 @@
 	</section>
 </template>
 <script>
-import axios from 'axios'
+// import axios from 'axios'
+// import {mapActions} from 'vuex'
 const countries = require('i18n-iso-countries')
 countries.registerLocale(require('i18n-iso-countries/langs/en.json'))
 export default{
@@ -148,7 +144,6 @@ export default{
 			yearsOfWorkingExperience: '',
 			yearsOfExperienceWithPrimaryStack: '',
 			resumeFileUrl: '',
-			password: '',
 			primaryStack: '',
 		}
 	},
@@ -159,34 +154,34 @@ export default{
     }
   },
   methods: {
-	  async registerUser(){
-			await axios.post('https://localhost/api/v1/user/register',
-			{
-				nationality: this.nationality,
-				portfolioLink: this.portfolioLink,
-				firstName: this.firstName,
-				lastName: this.lastName,
-				email: this.email,
-				englishProficiency: this.englishProficiency,
-				yearsOfWorkingExperience: this.yearsOfWorkingExperience,
-				yearsOfExperienceWithPrimaryStack: this.yearsOfExperienceWithPrimaryStack,
-				resumeFileUrl: this.resumeFileUrl,
-				password: this.password,
-				primaryStack: this.primaryStack,
-			})
-			this.firstName = ''
-			this.lastName =''
-			this.email = ''
-			this.password = ''
-			this.englishProficiency = ''
-			this.yearsOfWorkingExperience = ''
-			this.yearsOfExperienceWithPrimaryStack = ''
-			this.resumeFileUrl = ''
-			this.primaryStack= ''
-			this.nationality = ''
-			this.portfolioLink = ''
+	// ...mapActions(["register"]),
+	 async registerUser(){
+		 const payload = {
+			nationality: this.nationality,
+			portfolioLink: this.portfolioLink,
+			firstName: this.firstName,
+			lastName: this.lastName,
+			email: this.email,
+			englishProficiency: this.englishProficiency,
+			yearsOfWorkingExperience: this.yearsOfWorkingExperience,
+			yearsOfExperienceWithPrimaryStack: this.yearsOfExperienceWithPrimaryStack,
+			resumeFileUrl: this.resumeFileUrl,
+			primaryStack: this.primaryStack,
+		 }
+		 await this.$store.dispatch('register', payload)
+
+			// this.firstName = ''
+			// this.lastName =''
+			// this.email = ''
+			// this.englishProficiency = ''
+			// this.yearsOfWorkingExperience = ''
+			// this.yearsOfExperienceWithPrimaryStack = ''
+			// this.resumeFileUrl = ''
+			// this.primaryStack= ''
+			// this.nationality = ''
+			// this.portfolioLink = ''
 		}
-  }
+}
 }
 </script>
 <style lang="scss" scoped>

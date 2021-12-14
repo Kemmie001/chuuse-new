@@ -42,7 +42,7 @@
 			 <div class="text-center flex my-5 justify-center">
 				 <h1 class="font-bold mr-4 self-center">Status:</h1>
 				 <button class="bg-info px-5 py-1 rounded-md text-white font-semibold">
-					 Awaiting Approval
+					 Awaiting Match
 				 </button>
 			 </div>
 		 </div>
