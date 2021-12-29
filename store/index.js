@@ -7,11 +7,15 @@ export const newUser = (data) => {
 }
 const state = {
 	userEmail: "hey",
-	details: {}
+	details: {},
+	loader: false,
+	accessToken: null
 }
 const getters = {
+	getToken: (state) => state.accessToken,
 	getUser: (state) => state.userEmail,
-	getDetail: (state) => state.details
+	getDetail: (state) => state.details,
+	logging: (state) => state.loader
 };
 const actions = {
 	register: (context, payload) => {
@@ -64,6 +68,7 @@ const actions = {
 			})
 	},
 	loginUser: (context, loginDetails) => {
+		context.commit("setLoading", true);
 		const { email, password } = loginDetails
 		const loginData = { email, password }
 		return axios.post(`${baseUrl}/api/v1/user/login`, loginData)
@@ -72,6 +77,13 @@ const actions = {
 				window.localStorage.setItem('e-l-key', JSON.stringify(key));
 				context.commit('setKey', window.localStorage.getItem('e-l-key'))
 			})
+			.finally(() => {
+				context.commit("setLoading", false);
+			})
+	},
+	logout({ commit }) {
+		localStorage.removeItem('e-l-key');
+		commit('logout');
 	},
 	getUser: (context) => {
 		axios.get(`${baseUrl}/api/v1/user/me`, {
@@ -97,6 +109,12 @@ const mutations = {
 	},
 	userDetails: (state, detail) => {
 		state.details = detail
+	},
+	setLoading: (state, loading) => {
+		state.loader = loading
+	},
+	logout: (state) => {
+		state.accessToken = null;
 	}
 };
 export default {

@@ -16,7 +16,15 @@
                   text-white
                 "
               >
-                <i class="uil uil-user text-4xl self-center font-bold"></i>
+                <i
+                  v-if="!userdetails.avatarUrl"
+                  class="uil uil-user text-4xl self-center font-bold"
+                ></i>
+                <img
+                  class="w-20 h-20 rounded-full"
+                  :src="userdetails.avatarUrl"
+                  alt=""
+                />
               </div>
               <div class="self-center pl-5">
                 <h1 class="font-bold capitalize text-lg">
@@ -44,9 +52,9 @@
         </div>
         <div class="md:flex justify-around">
           <ul class="mt-3">
-            <li class="pt-3">Phone Number: {{ Nil }}</li>
+            <li class="pt-3">Phone Number: {{ userdetails.phoneNumber }}</li>
             <li class="py-3">Nationality: {{ userdetails.nationality }}</li>
-            <li class="pb-3">Location: {{ userdetails.nationality }}</li>
+            <li class="pb-3">Location: {{ userdetails.location }}</li>
           </ul>
 
           <div class="flex">
@@ -60,9 +68,9 @@
         </div>
         <div class="text-center flex my-5 justify-center">
           <h1 class="font-bold mr-4 self-center">Status:</h1>
-          <button class="bg-info px-5 py-1 rounded-md text-white font-semibold">
+          <div class="bg-info px-5 py-1 rounded-md text-white font-semibold">
             Awaiting Match
-          </button>
+          </div>
         </div>
       </div>
       <div class="lg:w-5/12 mt-10 md:mt-0">
@@ -115,6 +123,7 @@
 </template>
 
 <script>
+import { isLoggedIn } from '../util/user'
 export default {
   layout: 'empty',
   computed: {
@@ -123,6 +132,10 @@ export default {
     }
   },
   mounted() {
+    const x = isLoggedIn()
+    if (!x) {
+      this.$router.push('/login')
+    }
     this.$store.dispatch('user/getUser')
   },
   methods: {}

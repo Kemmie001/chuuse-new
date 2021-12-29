@@ -3,7 +3,7 @@
     <div class="pb-10 my-8">
       <form class="" @submit.prevent="editProfile">
         <div class="">
-          <div class="form-group mb-5">
+          <div class="form-group mb-8">
             <label
               class="
                 file-holder
@@ -21,7 +21,11 @@
                   class="absolute flex flex-col justify-center items-center"
                 >
                   <p>Select Profile Photo</p>
-                  <i class="uil uil-camera-plus text-4xl"></i>
+                  <i
+                    v-if="!user.avatarUrl"
+                    class="uil uil-user text-4xl self-center font-bold"
+                  ></i>
+                  <img class="rounded-full" :src="user.avatarUrl" alt="" />
                 </span>
                 <img v-if="pict" id="iimm" class="poster" :src="pict" alt="" />
               </div>
@@ -59,23 +63,11 @@
               />
             </div>
             <div class="form-group pb-10">
-              <label for="email">Email Address: *</label>
-              <input
-                id=""
-                v-model="user.email"
-                type="email"
-                required
-                class="rounded-lg"
-                name="email"
-                placeholder="Your email address"
-              />
-            </div>
-            <div class="form-group pb-10">
               <label for="phone">Phone Number: *</label>
               <input
                 id=""
-                v-model="user.phone"
-                type="number"
+                v-model="user.phoneNumber"
+                type="text"
                 required
                 class="rounded-lg"
                 name="phone"
@@ -160,7 +152,7 @@
               </select>
             </div>
             <div class="form-group pb-10">
-              <label for="phone"
+              <label for="portfolio"
                 >Portfolio Link (E.g Github, Dribble, Behance and so on)</label
               >
               <input
@@ -210,8 +202,8 @@
           </p>
         </div>
         <div class="flex justify-center my-10 gap-x-5 md:gap-x-10">
-          <button class="btn-primary px-10 lg:px-32 py-4">
-            Update Profile
+          <button class="btn-primary px-10 lg:px-32 py-4 flex justify-center">
+            Update Profile <loader :loading="loading" class="self-center" />
           </button>
         </div>
       </form>
@@ -220,10 +212,16 @@
 </template>
 <script>
 import axios from 'axios'
+import { isLoggedIn } from '../util/user'
+import loader from '../components/loading.vue'
 const countries = require('i18n-iso-countries')
 countries.registerLocale(require('i18n-iso-countries/langs/en.json'))
 export default {
+  components: {
+    loader
+  },
   layout: 'empty',
+
   data() {
     return {
       pict: null,
@@ -232,25 +230,33 @@ export default {
         portfolioLink: '',
         firstName: '',
         lastName: '',
-        email: '',
         englishProficiency: '',
-        phone: '',
         location: '',
         yearsOfWorkingExperience: '',
         yearsOfExperienceWithPrimaryStack: '',
         resumeFileUrl: '',
-        primaryStack: ''
-      },
-      id: this.$store.getters['user/getData']._id
+        primaryStack: '',
+        phoneNumber: ''
+      }
     }
   },
   computed: {
     countries() {
       const list = countries.getNames('en', { select: 'official' })
       return Object.keys(list).map((key) => ({ value: key, label: list[key] }))
+    },
+    loading() {
+      return this.$store.getters['user/editing']
+    },
+    id() {
+      return JSON.parse(window.localStorage.getItem('e-l-id'))
     }
   },
   mounted() {
+    const x = isLoggedIn()
+    if (!x) {
+      this.$router.push('/login')
+    }
     this.getUserData()
     this.$store.dispatch('user/getUser')
   },
@@ -284,31 +290,30 @@ export default {
       const editPayload = {
         nationality: this.user.nationality,
         portfolioLink: this.user.portfolioLink,
+        phoneNumber: this.user.phoneNumber,
         firstName: this.user.firstName,
         lastName: this.user.lastName,
-        email: this.user.email,
         englishProficiency: this.user.englishProficiency,
         yearsOfWorkingExperience: this.user.yearsOfWorkingExperience,
         yearsOfExperienceWithPrimaryStack:
           this.user.yearsOfExperienceWithPrimaryStack,
         resumeFileUrl: this.user.resumeFileUrl,
         primaryStack: this.user.primaryStack,
-        location: this.user.location,
-        phone: this.user.phone
+        location: this.user.location
       }
       await this.$store.dispatch('user/editUser', editPayload)
-      this.user.firstName = ''
-      this.user.lastName = ''
-      this.user.email = ''
-      this.user.englishProficiency = ''
-      this.user.yearsOfWorkingExperience = ''
-      this.user.yearsOfExperienceWithPrimaryStack = ''
-      this.user.resumeFileUrl = ''
-      this.user.primaryStack = ''
-      this.user.nationality = ''
-      this.user.portfolioLink = ''
-      this.user.location = ''
-      this.user.phone = ''
+      // console.log(this.user.phoneNumber)
+      const formdata = new FormData()
+      formdata.append('avatar', this.profileImage)
+      await axios.post(
+        `https://chuuse-node.herokuapp.com/api/v1/user/avatar`,
+        formdata,
+        {
+          headers: {
+            'x-id-key': JSON.parse(window.localStorage.getItem('e-l-key'))
+          }
+        }
+      )
       this.$router.push('/user-dashboard')
     }
   }
@@ -325,6 +330,7 @@ export default {
   border-radius: 50%;
   width: 170px;
   height: 170px;
+  // z-index: 10;
   img.poster {
     border-radius: 50%;
     width: 170px;
