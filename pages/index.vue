@@ -56,17 +56,13 @@
           :pagination-enabled="false"
           :loop="true"
           :per-page-custom="[
-            [120, 4],
+            [120, 3],
             [1080, 4],
           ]"
           class="
-            flex
             w-full
-            lg:justify-center
-            self-center
-            gap-x-10
             mt-5
-            md:mt-0 md:w-10/12
+            md:mt-0
           "
           :autoplay="true"
           :mouse-drag="false"
@@ -129,7 +125,7 @@
       </div>
     </section>
     <section class="justify-between py-20 lg:px-20 px-8 lg:flex">
-      <div class="w-3/4 mx-auto md:mx-0 pb-10 lg:pb-0 flex lg:w-4/12">
+      <div class="w-3/4 sm:mx-auto md:mx-0 pb-10 lg:pb-0 flex lg:w-4/12">
         <img class="hm-hero" src="../assets/img/why.png" alt />
       </div>
       <div class="lg:w-7/12 lg:self-center">
@@ -176,10 +172,10 @@
       </div>
     </section>
     <section class="bg-primary text-white lg:px-20 px-8 pt-10 pb-16">
-      <h1 class="header4 py-5 text-center">
+      <h1 class="header4 py-5 sm:text-center">
         Tech Skills you want to build a career in
       </h1>
-      <h2 class="header7 mb-14 text-center">
+      <h2 class="header7 mb-14 sm:text-center">
         Access a variety of courses that will make you Job-ready and earn cool
         cash in Tech
       </h2>
@@ -217,20 +213,20 @@
           </ul>
         </div>
       </div>
-      <div class="flex justify-center mb-5">
+      <div class="flex sm:justify-center mb-5">
         <nuxt-link to="/apply" class="btn-secondary mr-10 px-10 lg:px-16 py-4">
           Get Access Now &rightarrow;
         </nuxt-link>
       </div>
     </section>
-    <section class="bg-gray-light text-center py-10 lg:px-20 px-8 banner">
+    <section class="bg-gray-light sm:text-center py-10 lg:px-20 px-8 banner">
       <h1 class="text-tertiary header6 py-5">Our Partnership</h1>
       <div class="lg:flex justify-center pb-10">
         <div
           class="
             grid grid-cols-2
             md:flex md:justify-between md:flex-wrap
-            gap-y-10 gap-x-4
+            gap-4 p-4 bg-white rounded shadow-sm
           "
         >
           <div class="mx-auto">
