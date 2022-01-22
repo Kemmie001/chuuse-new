@@ -5,7 +5,7 @@
 				<img class="hm-hero" src="../assets/img/about.gif" alt />
 			</div>
 			<div class="self-center lg:w-5/12 text-neutral">
-				<h1 class="header2">
+				<h1 class="header2 text-2xl sm:text-3xl font-extrabold">
 					Opportunity is everywhere. The key is to develop the vision to see it.
 				</h1>
 				<p class="headline pt-6">
@@ -21,19 +21,19 @@
 				<h1 class="text-primary header2 md:pb-4">
 					1k+
 				</h1>
-				<p class="header6">Members in the Chuuse <br> Learning Community</p>
+				<p class="header6 text-base">Members in the Chuuse <br> Learning Community</p>
 			</div>
 			<div class="text-center self-center pb-10 md:pb-4">
 				<h1 class="text-primary header2 md:pb-4">
 					50+
 				</h1>
-				<p class="header6">Engineers Placed</p>
+				<p class="header6 text-base">Engineers Placed</p>
 			</div>
 			<div class="text-center self-center">
 				<h1 class="text-primary header2 md:pb-4">
 					20+
 				</h1>
-				<p class="header6">Participating Companies</p>
+				<p class="header6 text-base">Participating Companies</p>
 			</div>
 		</div>
 		<article class="justify-between lg:flex lg:flex-row-reverse pt-10 pb-10">
@@ -41,7 +41,7 @@
 				<img class="hm-hero" src="../assets/img/what.png" alt />
 			</div>
 			<div class="self-center lg:w-6/12">
-				<h1 class="header3 text-primary">
+				<h1 class="header3 text-2xl sm:text-3xl text-primary">
 					What is Chuuse About ?
 				</h1>
 				<p class="headline pt-6">

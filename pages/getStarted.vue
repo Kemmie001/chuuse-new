@@ -2,7 +2,7 @@
   <section class="bg-gray-light pt-32 lg:py-20 lg:px-20 px-8">
     <section class="justify-between banner lg:flex py-10">
       <div class="self-center lg:w-5/12 text-neutral">
-        <h1 class="header2">Work With The World’s Leading Companies</h1>
+        <h1 class="header2 text-2xl sm:texl-3xl">Work With The World’s Leading Companies</h1>
         <p class="para1 pt-8">
           By applying to join our Talent pool, you are getting closer to getting
           your next role, advancing your career, and connecting with other
@@ -185,7 +185,7 @@
             may withdraw my consent through unsubscribe links at any time.
           </p>
         </div>
-        <div class="flex justify-center my-10 gap-x-5 md:gap-x-10">
+        <div class="flex sm:justify-center my-10 gap-x-5 md:gap-x-10">
           <button class="btn-primary px-10 lg:px-32 py-4">Submit</button>
         </div>
       </form>
@@ -208,7 +208,8 @@ export default {
       yearsOfWorkingExperience: '',
       yearsOfExperienceWithPrimaryStack: '',
       resumeFileUrl: '',
-      primaryStack: ''
+      primaryStack: '',
+      isLoading: false
     }
   },
   computed: {
