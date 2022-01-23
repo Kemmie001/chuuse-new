@@ -147,7 +147,7 @@
         </div>
       </div>
     </div>
-    <section class="faq bg-white text-gray-dark">
+    <!-- <section class="faq bg-white text-gray-dark">
       <div class="lg:pt16 pt-10 pb-20 lg:px-20 px-8">
         <h1 class="header4 py-6 text-center">FAQ</h1>
         <div class="">
@@ -246,7 +246,7 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -254,29 +254,29 @@
 export default {
   data() {
     return {
-      menuOpen: false,
-      showPro: false,
-      showAccelerate: false,
-      showLed: false,
-      showCrash: false
+      // menuOpen: false,
+      // showPro: false,
+      // showAccelerate: false,
+      // showLed: false,
+      // showCrash: false
     }
   },
   methods: {
-    toggleMenu() {
-      this.menuOpen = !this.menuOpen
-    },
-    togglePro() {
-      this.showPro = !this.showPro
-    },
-    toggleAccelerate() {
-      this.showAccelerate = !this.showAccelerate
-    },
-    toggleLed() {
-      this.showLed = !this.showLed
-    },
-    toggleCrash() {
-      this.showCrash = !this.showCrash
-    }
+    // toggleMenu() {
+    //   this.menuOpen = !this.menuOpen
+    // },
+    // togglePro() {
+    //   this.showPro = !this.showPro
+    // },
+    // toggleAccelerate() {
+    //   this.showAccelerate = !this.showAccelerate
+    // },
+    // toggleLed() {
+    //   this.showLed = !this.showLed
+    // },
+    // toggleCrash() {
+    //   this.showCrash = !this.showCrash
+    // }
   }
 }
 </script>
