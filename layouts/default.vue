@@ -80,7 +80,7 @@
         class="mobile-menu-new-holder"
         @click.self="toggleMenu"
       >
-        <div class="mobile-menu-new">
+        <div class="mobile-menu-new transition-all ease-out delay-100 duration-500">
           <menu>
             <a
               href=""
