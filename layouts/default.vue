@@ -196,8 +196,6 @@ export default {
     width: 80%;
     height: 100vh;
     background: #ffffff;
-    transition: ease-in-out;
-    transition-duration: 500ms;
 
     menu {
       margin-left: 0;
