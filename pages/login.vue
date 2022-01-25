@@ -5,7 +5,7 @@
       <h2 class="headline py-5">
         Login to your account and manage all your jobs and gigs assigned to you.
       </h2>
-      <form action="" class="pt-5" @submit.prevent="loginUserNew">
+      <form action="" class="pt-5" @submit.prevent="loginUser">
         <div class="form-group pb-10">
           <label for="email">Email address</label>
           <input
@@ -84,7 +84,7 @@ export default {
   },
   methods: {
     async loginUser() {
-      this.isLoading = true
+      // this.isLoading = true
       const loginData = {
         email: this.email,
         password: this.password
@@ -107,14 +107,10 @@ export default {
               body: JSON.stringify(data),
             })
             .then(response => response.json())
-            .then(data => {
-              console.log('Success:', data);
+            .then(payload => {
               this.isLoading = false
-              this.message = data.message
+              this.message = payload.message
             })
-            .catch((error) => {
-              console.error('Error:', error);
-            });
     }
   }
 }
