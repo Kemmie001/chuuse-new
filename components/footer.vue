@@ -149,15 +149,15 @@
 					<h1 class="header7 mb-6">Our office address</h1>
 					<div class="lg:mx-0 headline mb-10">
 						<a class="" target="_blank" rel="noreferer" href="https://goo.gl/maps/uikWjS9DEvW3coQ69">
-							50 Ebittu Ukiwe street, Jabi, Abuja Nigeria
+							9b Ike Asogwa Cl, Maryland 101233, Ikeja Lagos NG
 						</a>
 					</div>
 					<h1 class="header7 my-4">Sign up to our newsletter</h1>
-					<div class="form-group md:bg-gray-light rounded-lg md:flex md:gap-x-4 md:justify-between">
+					<div class="form-group md:bg-gray-light rounded-lg md:flex md:gap-x-4 md:justify-between w-full overflow-hidden">
 						<input class="focus:outline-none block md:inline p-3
-						rounded-lg ml-1 md:ml-4 para1 bg-gray-light text-gray-medDark" type="email" name=""
+						rounded-lg md:ml-4 para1 bg-gray-light text-gray-medDark w-full" type="email" name=""
 							placeholder="Your email address">
-						<button class="text-white p-3 my-2 bg-gray-dark rounded-lg focus:outline-none">
+						<button class="text-white p-3 my-2 sm:mr-2 bg-gray-dark rounded-lg focus:outline-none">
 							<a href="" class="flex md:hidden">Subscribe</a>
 							<a href="" class="hidden md:flex">GO</a></button>
 					</div>

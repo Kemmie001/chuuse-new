@@ -3,17 +3,17 @@
     <section
       class="
         justify-between
-        h-screen
+        sm:h-screen
         lg:pt-32 lg:pl-20 lg:px-0
         px-8
         bg-gray-dark
         text-white
         lg:flex
-        pt-24
+        pt-24 pb-16 sm:pb-0
       "
     >
       <div class="self-center lg:w-5/12 my-10">
-        <h1 class="header3">
+        <h1 class="header3 text-3xl sm:text-4xl">
           Join a community of Software Engineers. Get hired by High paying
           companies
         </h1>
@@ -49,7 +49,7 @@
     </section>
     <article class="lg:pt-24 pt-8 lg:pt-16 pb-20 lg:px-20 px-8">
       <div class="w-full text-center">
-        <h3 class="header4 mx-auto md:w-3/4 py-5">
+        <h3 class="header4 mx-auto md:w-3/4 py-5 text-2xl sm:text-4xl">
           Why you should join our community of the Chuuse’s Fellowship Programme
         </h3>
       </div>

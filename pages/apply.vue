@@ -135,8 +135,9 @@ export default{
 	input,
 	textarea,
 	select {
-		background: none;
+		background: white;
 		border: 1px solid rgba(127, 126, 126, 1);
+		color: #222121;
 		display: block;
 		padding: 10px;
 		margin-top: 0.75rem;

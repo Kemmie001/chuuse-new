@@ -5,7 +5,7 @@
       <h2 class="headline py-5">
         Login to your account and manage all your jobs and gigs assigned to you.
       </h2>
-      <form action="" class="pt-5" @submit.prevent="loginUser">
+      <form action="" class="pt-5" @submit.prevent="loginUserNew">
         <div class="form-group pb-10">
           <label for="email">Email address</label>
           <input
@@ -13,7 +13,7 @@
             type="email"
             name="email"
             placeholder="Enter your email address"
-          />
+            />
         </div>
         <div class="form-group pb-10">
           <label for="Password">Password</label>
@@ -25,8 +25,17 @@
           />
         </div>
         <button class="btn-primary w-full py-4 flex justify-center">
-          Login <loader :loading="loading" class="self-center" />
+          <template v-if="!isLoading">
+            Login <loader :loading="loading" class="self-center" />
+          </template>
+          <template v-else>
+            <spinner/>
+          </template>
         </button>
+        <!-- error message -->
+        <div v-if="message" class="p-6 mt-6 bg-white rounded text-red-700">
+              {{message}}
+        </div>
         <div class="form-group flex lg:hidden pt-10 self-center">
           <p class="headline self-center">Do not have an account yet?</p>
           <nuxt-link to="/getStarted" class="text-primary header7 pl-5">
@@ -47,15 +56,19 @@
 </template>
 <script>
 import loader from '../components/loading.vue'
+import Spinner from '../components/spinner.vue'
 import { isLoggedIn } from '../util/user'
 export default {
   components: {
-    loader
+    loader,
+    Spinner
   },
   data() {
     return {
       email: '',
-      password: ''
+      password: '',
+      isLoading: false,
+      message: ''
     }
   },
   computed: {
@@ -71,12 +84,37 @@ export default {
   },
   methods: {
     async loginUser() {
+      this.isLoading = true
       const loginData = {
         email: this.email,
         password: this.password
       }
       await this.$store.dispatch('loginUser', loginData)
       this.$router.push('/user-dashboard')
+    },
+    loginUserNew(){
+      this.isLoading = true;
+      const baseURL = 'https://chuuse-node.herokuapp.com/api/v1/user/login'
+      const data = {
+        email: this.email,
+        password: this.password
+      }
+      fetch( baseURL, {
+              method: 'POST', // or 'PUT'
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+              console.log('Success:', data);
+              this.isLoading = false
+              this.message = data.message
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            });
     }
   }
 }
@@ -86,8 +124,9 @@ export default {
 
 input,
 textarea {
-  background: none;
+  background: white;
   border: 1px solid white;
+  color: #222121;
   display: block;
   padding: 8px;
   margin-top: 0.75rem;
@@ -100,7 +139,7 @@ input:focus {
 }
 
 input::placeholder {
-  color: white;
+  color: #383737;
 }
 
 textarea:focus {
@@ -108,7 +147,7 @@ textarea:focus {
 }
 
 textarea::placeholder {
-  color: white;
+  color: #383737;
 }
 
 .login-side {

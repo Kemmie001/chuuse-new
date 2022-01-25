@@ -76,8 +76,9 @@ export default {
 		}
 	}
 	input, textarea{
-		background: none;
+		background: white;
 		border: 1px solid white;
+		color: #2e2e2e;
 		display: block;
 		padding: 8px;
 		margin-top: 0.75rem;
@@ -87,13 +88,13 @@ export default {
 		outline: none;
 	}
 	input::placeholder{
-		color: white;
+		color: #383737;
 	}
 	textarea:focus{
 		outline: none;
 	}
 	textarea::placeholder{
-		color: white;
+		color: #383737;
 	}
 	.hm-hero {
 		@include md {

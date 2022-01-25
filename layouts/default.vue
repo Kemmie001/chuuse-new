@@ -80,7 +80,7 @@
         class="mobile-menu-new-holder"
         @click.self="toggleMenu"
       >
-        <div class="mobile-menu-new">
+        <div class="mobile-menu-new transition transform ease-in-out duration-500">
           <menu>
             <a
               href=""
@@ -117,7 +117,7 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 // import mainMenu from '@/components/menu.vue';
 import publicFooter from '../components/footer'
 export default {
@@ -430,6 +430,7 @@ a:hover {
   font-size: 16px;
   font-weight: bold;
 }
+
 
 @media only screen and (max-width: 1028px) {
   .logo {
