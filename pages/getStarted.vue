@@ -2,7 +2,9 @@
   <section class="bg-gray-light pt-32 lg:py-20 lg:px-20 px-8">
     <section class="justify-between banner lg:flex py-10">
       <div class="self-center lg:w-5/12 text-neutral">
-        <h1 class="header2 text-2xl sm:texl-3xl">Work With The World’s Leading Companies</h1>
+        <h1 class="header2 text-2xl sm:texl-3xl">
+          Work With The World’s Leading Companies
+        </h1>
         <p class="para1 pt-8">
           By applying to join our Talent pool, you are getting closer to getting
           your next role, advancing your career, and connecting with other
@@ -74,7 +76,7 @@
             </div>
             <div class="form-group pb-10">
               <label for="Nationality">Nationality: *</label>
-              <select v-model="nationality">
+              <select v-model="nationality" required>
                 <option value="" disabled selected>Select Your Country</option>
                 <option
                   v-for="country in countries"
@@ -87,7 +89,7 @@
             </div>
             <div class="form-group pb-10">
               <label for="experience">Years of Working Experience: *</label>
-              <select v-model="yearsOfWorkingExperience">
+              <select v-model="yearsOfWorkingExperience" required>
                 <option value="" disabled selected>Select an option</option>
                 <option value="1">1 year</option>
                 <option value="2">2 years</option>
@@ -100,7 +102,7 @@
               <label for="years"
                 >Years of Experience With Primary Stack: *</label
               >
-              <select v-model="yearsOfExperienceWithPrimaryStack">
+              <select v-model="yearsOfExperienceWithPrimaryStack" required>
                 <option value="" disabled selected>Select an option</option>
                 <option value="1">1 year</option>
                 <option value="2">2 years</option>
@@ -111,7 +113,7 @@
             </div>
             <div class="form-group pb-10">
               <label for="stack">Primary Stack: *</label>
-              <select v-model="primaryStack">
+              <select v-model="primaryStack" required>
                 <option value="" disabled selected>Select an option</option>
                 <option value="Web developer">Web development</option>
                 <option value="Mobile App developer">
@@ -129,7 +131,7 @@
             </div>
             <div class="form-group pb-10">
               <label for="language">English Proficiency: *</label>
-              <select v-model="englishProficiency">
+              <select v-model="englishProficiency" required>
                 <option value="" disabled selected>Select an option</option>
                 <option value="Beginner">Beginner</option>
                 <option value="Intermediate">Intermediate</option>
@@ -156,6 +158,7 @@
                 type="url"
                 name="Resume"
                 placeholder="Upload Resume Link"
+                required
               />
             </div>
           </div>
@@ -166,6 +169,7 @@
             type="checkbox"
             name="file"
             placeholder="Drag files here or click to add files"
+            required
           />
           <span class="para1 pl-3">
             I agree to Chuuse's
@@ -178,6 +182,7 @@
             type="checkbox"
             name="file"
             placeholder="Drag files here or click to add files"
+            required
           />
           <p class="para1 pl-3">
             I understand that Chuuse will process my information in accordance
@@ -186,7 +191,9 @@
           </p>
         </div>
         <div class="flex sm:justify-center my-10 gap-x-5 md:gap-x-10">
-          <button class="btn-primary px-10 lg:px-32 py-4">Submit</button>
+          <button class="btn-primary px-10 lg:px-32 py-4">
+            Submit <loader :loading="loading" class="self-center" />
+          </button>
         </div>
       </form>
     </div>
@@ -194,9 +201,15 @@
 </template>
 <script>
 // import axios from 'axios'
+import toastr from 'toastr'
+import loader from '../components/loading.vue'
+import 'toastr/build/toastr.css'
 const countries = require('i18n-iso-countries')
 countries.registerLocale(require('i18n-iso-countries/langs/en.json'))
 export default {
+  components: {
+    loader
+  },
   data() {
     return {
       nationality: '',
@@ -212,6 +225,7 @@ export default {
       isLoading: false
     }
   },
+
   computed: {
     userEmail() {
       return this.$store.getters.getUser
@@ -219,6 +233,12 @@ export default {
     countries() {
       const list = countries.getNames('en', { select: 'official' })
       return Object.keys(list).map((key) => ({ value: key, label: list[key] }))
+    },
+    loading() {
+      return this.$store.getters.registering
+    },
+    errMessage() {
+      return this.$store.getters.registeringUser
     }
   },
   methods: {
@@ -247,7 +267,16 @@ export default {
       this.primaryStack = ''
       this.nationality = ''
       this.portfolioLink = ''
-      this.$router.push('/verify-email')
+
+      if (this.errMessage) {
+        // this.signIn = false
+        toastr.error(`${this.errMessage}`, 'Registration Error')
+        this.email = ''
+        this.password = ''
+      } else {
+        // this.signIn = false
+        // this.$router.push('/verify-email')
+      }
     }
   }
 }

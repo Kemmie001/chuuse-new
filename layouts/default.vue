@@ -80,7 +80,9 @@
         class="mobile-menu-new-holder"
         @click.self="toggleMenu"
       >
-        <div class="mobile-menu-new transition transform ease-in-out duration-500">
+        <div
+          class="mobile-menu-new transition transform ease-in-out duration-500"
+        >
           <menu>
             <a
               href=""
@@ -169,7 +171,7 @@ export default {
   align-items: center;
   height: 50px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
-  z-index: 9999999;
+  z-index: 9999;
 }
 
 .slot-holder {
@@ -376,7 +378,7 @@ a:hover {
     width: auto;
     height: auto;
     background: rgba(0, 0, 0, 0);
-    z-index: 9999999999;
+    z-index: 999;
 
     .menu1 {
       height: 300px;
@@ -430,7 +432,6 @@ a:hover {
   font-size: 16px;
   font-weight: bold;
 }
-
 
 @media only screen and (max-width: 1028px) {
   .logo {

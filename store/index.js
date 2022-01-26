@@ -9,13 +9,19 @@ const state = {
 	userEmail: "hey",
 	details: {},
 	loader: false,
-	accessToken: null
+	accessToken: null,
+	loginErr: null,
+	registering: false,
+	registerErr: null
 }
 const getters = {
 	getToken: (state) => state.accessToken,
 	getUser: (state) => state.userEmail,
 	getDetail: (state) => state.details,
-	logging: (state) => state.loader
+	logging: (state) => state.loader,
+	getErrMessage: (state) => state.loginErr,
+	registering: (state) => state.registering,
+	registeringUser: (state) => state.registerErr,
 };
 const actions = {
 	register: (context, payload) => {
@@ -42,15 +48,21 @@ const actions = {
 			resumeFileUrl,
 			primaryStack
 		}
+		context.commit("setRegistering", true);
 		newUser(data.email)
 		window.localStorage.setItem('e-l-user', JSON.stringify(data.email))
 		context.commit('setUser', window.localStorage.getItem('e-l-user'))
 		axios.post(`${baseUrl}/api/v1/user/register`,
 			data)
 			.then((res) => {
-				return { status: "success", message: "successful registration!" }
+				context.commit("setErrRegister", false)
 			})
-		// return userData
+			.catch((err) => {
+				context.commit("setErrRegister", err.response.data.message)
+			})
+			.finally(() => {
+				context.commit("setRegistering", false);
+			})
 	},
 	verifyUser: (context, codeDetails) => {
 		const { verificationCode, email } = codeDetails
@@ -76,6 +88,10 @@ const actions = {
 				const key = res.headers["x-id-key"]
 				window.localStorage.setItem('e-l-key', JSON.stringify(key));
 				context.commit('setKey', window.localStorage.getItem('e-l-key'))
+				context.commit("setErrMessage", false)
+			})
+			.catch((err) => {
+				context.commit("setErrMessage", err.response.data.message)
 			})
 			.finally(() => {
 				context.commit("setLoading", false);
@@ -101,6 +117,9 @@ const actions = {
 
 
 const mutations = {
+	setErrMessage: (state, errMessage) => {
+		state.loginErr = errMessage
+	},
 	setUser: (state, kem) => {
 		state.userEmail = kem;
 	},
@@ -112,6 +131,12 @@ const mutations = {
 	},
 	setLoading: (state, loading) => {
 		state.loader = loading
+	},
+	setRegistering: (state, loading) => {
+		state.registering = loading
+	},
+	setErrRegister: (state, errMessage) => {
+		state.registerErr = errMessage
 	},
 	logout: (state) => {
 		state.accessToken = null;
