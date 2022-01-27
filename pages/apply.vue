@@ -99,7 +99,7 @@ export default{
 	},
 	methods: {
 		async applyCohort(){
-			await axios.post('https://localhost/api/v1/contact-form',
+			await axios.post('https://chuuse-node.herokuapp.com/api/v1/apply-form',
 			{
 				firstName: this.apply.firstName,
 				lastName: this.apply.lastName,
